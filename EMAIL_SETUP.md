@@ -124,21 +124,32 @@ Try submitting a test message through the contact form on your website.
    send_mail('Test', 'Test message', settings.DEFAULT_FROM_EMAIL, ['info@smdata.dev'])
    ```
 
-## Alternative SMTP Servers
+## Important Note About SMTP Connectivity
 
-If you're using a different email provider, you may need to change the SMTP settings. Here are common configurations:
+**Office365/Outlook SMTP (`smtp.office365.com`) often blocks connections from cloud providers like Railway** due to security policies. If you're experiencing timeout errors, try one of these alternatives:
 
-### GoDaddy (Standard Email)
+### GoDaddy Relay (Default - Recommended)
+```bash
+EMAIL_HOST=relay-hosting.secureserver.net
+EMAIL_PORT=25
+```
+**Note:** May require IP whitelisting in your GoDaddy account
+
+### Alternative SMTP Servers
+
+If the default doesn't work, try these configurations:
+
+### GoDaddy with SMTP Authentication
+```bash
+EMAIL_HOST=smtpout.secureserver.net
+EMAIL_PORT=80
+```
+
+### GoDaddy (Office365)
 ```bash
 EMAIL_HOST=smtp.office365.com
 EMAIL_PORT=587
-```
-
-### GoDaddy (Workspace Email)
-```bash
-EMAIL_HOST=relay-hosting.secureserver.net
-EMAIL_PORT=587
-# Note: May require IP whitelisting
+# May be blocked by Railway firewall
 ```
 
 ### Gmail
