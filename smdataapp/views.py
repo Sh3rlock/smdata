@@ -57,10 +57,22 @@ This message was sent from the contact form on smdata.dev
                 })
                 
             except Exception as e:
-                return JsonResponse({
-                    'success': False, 
-                    'message': 'Sorry, there was an error sending your message. Please try again later.'
-                })
+                # Log the error for debugging
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.error(f"Email sending failed: {str(e)}")
+                
+                # In development, show more detailed error
+                if settings.DEBUG:
+                    return JsonResponse({
+                        'success': False, 
+                        'message': f'Email error: {str(e)}'
+                    })
+                else:
+                    return JsonResponse({
+                        'success': False, 
+                        'message': 'Sorry, there was an error sending your message. Please try again later.'
+                    })
                 
         except Exception as e:
             return JsonResponse({
