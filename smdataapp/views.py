@@ -5,6 +5,10 @@ from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 from django.http import JsonResponse
 import json
+import logging
+
+# Set up logger
+logger = logging.getLogger(__name__)
 
 def index(request):
     return render(request, 'index.html')
@@ -12,11 +16,16 @@ def index(request):
 def contact_form(request):
     if request.method == 'POST':
         try:
+            # Log request for debugging
+            logger.info(f"Contact form submission received from {request.META.get('REMOTE_ADDR')}")
+            
             # Get form data
             name = request.POST.get('name', '').strip()
             email = request.POST.get('email', '').strip()
             phone = request.POST.get('phone', '').strip()
             comments = request.POST.get('comments', '').strip()
+            
+            logger.debug(f"Form data: name={name}, email={email}, comments_len={len(comments)}")
             
             # Basic validation
             if not name or not email or not comments:
@@ -27,8 +36,7 @@ def contact_form(request):
             
             # Prepare email content
             subject = f'New Contact Form Submission from {name}'
-            message = f"""
-New contact form submission from smdata.dev website:
+            message = f"""New contact form submission from smdata.dev website:
 
 Name: {name}
 Email: {email}
@@ -38,18 +46,22 @@ Message:
 {comments}
 
 ---
-This message was sent from the contact form on smdata.dev
-            """
+This message was sent from the contact form on smdata.dev"""
+            
+            # Get from_email with fallback
+            from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@smdata.dev')
             
             # Send email
             try:
+                logger.info(f"Attempting to send email from {from_email} to info@smdata.dev")
                 send_mail(
                     subject=subject,
                     message=message,
-                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    from_email=from_email,
                     recipient_list=['info@smdata.dev'],
                     fail_silently=False,
                 )
+                logger.info("Email sent successfully")
                 
                 return JsonResponse({
                     'success': True, 
@@ -58,12 +70,10 @@ This message was sent from the contact form on smdata.dev
                 
             except Exception as e:
                 # Log the error for debugging
-                import logging
-                logger = logging.getLogger(__name__)
-                logger.error(f"Email sending failed: {str(e)}")
-                logger.error(f"EMAIL_BACKEND: {settings.EMAIL_BACKEND}")
-                logger.error(f"EMAIL_HOST_USER: {settings.EMAIL_HOST_USER}")
-                logger.error(f"HAS_EMAIL_PASSWORD: {bool(settings.EMAIL_HOST_PASSWORD)}")
+                logger.error(f"Email sending failed: {str(e)}", exc_info=True)
+                logger.error(f"EMAIL_BACKEND: {getattr(settings, 'EMAIL_BACKEND', 'NOT SET')}")
+                logger.error(f"EMAIL_HOST_USER: {getattr(settings, 'EMAIL_HOST_USER', 'NOT SET')}")
+                logger.error(f"HAS_EMAIL_PASSWORD: {bool(getattr(settings, 'EMAIL_HOST_PASSWORD', ''))}")
                 
                 # Show detailed error for debugging
                 error_message = f'Email error: {str(e)}'
@@ -76,9 +86,10 @@ This message was sent from the contact form on smdata.dev
                 })
                 
         except Exception as e:
+            logger.error(f"Contact form error: {str(e)}", exc_info=True)
             return JsonResponse({
                 'success': False, 
-                'message': 'Sorry, there was an error processing your request. Please try again.'
+                'message': f'Sorry, there was an error processing your request: {str(e)}'
             })
     
     return JsonResponse({'success': False, 'message': 'Invalid request method.'})
