@@ -195,27 +195,36 @@ IS_PRODUCTION = not DEBUG or os.environ.get('DYNO') or os.environ.get('RAILWAY_E
 
 # Configure email backend based on environment and credentials
 if IS_PRODUCTION and EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
-    # Production with SMTP credentials configured
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    
-    # SMTP configuration - defaults to GoDaddy relay but can be customized
-    EMAIL_HOST = os.environ.get('EMAIL_HOST', 'relay-hosting.secureserver.net')
-    EMAIL_PORT = int(os.environ.get('EMAIL_PORT', '25'))
-    
-    # Configure TLS/SSL based on port
-    if EMAIL_PORT == 587 or EMAIL_PORT == 465:
-        EMAIL_USE_TLS = (EMAIL_PORT == 587)
-        EMAIL_USE_SSL = (EMAIL_PORT == 465)
-    else:
-        EMAIL_USE_TLS = False
+    # Check if using SendGrid (email user is 'apikey')
+    if EMAIL_HOST_USER == 'apikey':
+        EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+        EMAIL_HOST = 'smtp.sendgrid.net'
+        EMAIL_PORT = 587
+        EMAIL_USE_TLS = True
         EMAIL_USE_SSL = False
+        print(f"✅ Email configured: SendGrid SMTP")
+    else:
+        # Standard SMTP configuration
+        EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+        
+        # SMTP configuration - try port 80 first (commonly allowed)
+        EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtpout.secureserver.net')
+        EMAIL_PORT = int(os.environ.get('EMAIL_PORT', '80'))
+        
+        # Configure TLS/SSL based on port
+        if EMAIL_PORT == 587 or EMAIL_PORT == 465:
+            EMAIL_USE_TLS = (EMAIL_PORT == 587)
+            EMAIL_USE_SSL = (EMAIL_PORT == 465)
+        else:
+            EMAIL_USE_TLS = False
+            EMAIL_USE_SSL = False
+        
+        print(f"✅ Email configured: SMTP backend with {EMAIL_HOST_USER} for {DEFAULT_FROM_EMAIL}")
+        print(f"   Using host: {EMAIL_HOST}:{EMAIL_PORT}")
+        print(f"   TLS: {EMAIL_USE_TLS}, SSL: {EMAIL_USE_SSL}")
     
     # Set email timeout to prevent hanging
     EMAIL_TIMEOUT = 10
-    
-    print(f"✅ Email configured: SMTP backend with {EMAIL_HOST_USER} for {DEFAULT_FROM_EMAIL}")
-    print(f"   Using host: {EMAIL_HOST}:{EMAIL_PORT}")
-    print(f"   TLS: {EMAIL_USE_TLS}, SSL: {EMAIL_USE_SSL}")
     print(f"   Timeout: {EMAIL_TIMEOUT}s")
 else:
     # Development or production without credentials - use console backend
