@@ -61,18 +61,19 @@ This message was sent from the contact form on smdata.dev
                 import logging
                 logger = logging.getLogger(__name__)
                 logger.error(f"Email sending failed: {str(e)}")
+                logger.error(f"EMAIL_BACKEND: {settings.EMAIL_BACKEND}")
+                logger.error(f"EMAIL_HOST_USER: {settings.EMAIL_HOST_USER}")
+                logger.error(f"HAS_EMAIL_PASSWORD: {bool(settings.EMAIL_HOST_PASSWORD)}")
                 
-                # In development, show more detailed error
-                if settings.DEBUG:
-                    return JsonResponse({
-                        'success': False, 
-                        'message': f'Email error: {str(e)}'
-                    })
-                else:
-                    return JsonResponse({
-                        'success': False, 
-                        'message': 'Sorry, there was an error sending your message. Please try again later.'
-                    })
+                # Show detailed error for debugging
+                error_message = f'Email error: {str(e)}'
+                if hasattr(settings, 'EMAIL_BACKEND'):
+                    error_message += f' | Backend: {settings.EMAIL_BACKEND}'
+                
+                return JsonResponse({
+                    'success': False, 
+                    'message': error_message
+                })
                 
         except Exception as e:
             return JsonResponse({

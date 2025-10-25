@@ -153,18 +153,64 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+    },
+    'loggers': {
+        'smdataapp': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
+
 # Email Configuration
 # Set default from email for both development and production
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'info@smdata.dev')
 
-# For development, use console backend to avoid email setup issues
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-else:
-    # Production email configuration
+# Get email credentials from environment variables
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+
+# Check if we're in production (DEBUG=False or on Heroku)
+IS_PRODUCTION = not DEBUG or os.environ.get('DYNO')
+
+# Configure email backend based on environment and credentials
+if IS_PRODUCTION and EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
+    # Production with SMTP credentials configured
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_PORT = 587
+    
+    # Use Outlook/Office 365 SMTP for GoDaddy emails
+    EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.office365.com')
+    EMAIL_PORT = int(os.environ.get('EMAIL_PORT', '587'))
     EMAIL_USE_TLS = True
-    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
-    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+    EMAIL_USE_SSL = False
+    
+    print(f"✅ Email configured: SMTP backend with {EMAIL_HOST_USER} for {DEFAULT_FROM_EMAIL}")
+    print(f"   Using host: {EMAIL_HOST}:{EMAIL_PORT}")
+else:
+    # Development or production without credentials - use console backend
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    if IS_PRODUCTION:
+        print("⚠️  Email configured: Console backend (no SMTP credentials found)")
+        print(f"   Set EMAIL_HOST_USER and EMAIL_HOST_PASSWORD environment variables to enable email delivery")
+    else:
+        print("ℹ️  Email configured: Console backend (development mode)")
