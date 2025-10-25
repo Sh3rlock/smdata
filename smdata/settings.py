@@ -190,8 +190,8 @@ DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'info@smdata.dev')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 
-# Check if we're in production (DEBUG=False or on Heroku)
-IS_PRODUCTION = not DEBUG or os.environ.get('DYNO')
+# Check if we're in production (DEBUG=False or on a hosting platform)
+IS_PRODUCTION = not DEBUG or os.environ.get('DYNO') or os.environ.get('RAILWAY_ENVIRONMENT')
 
 # Configure email backend based on environment and credentials
 if IS_PRODUCTION and EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:

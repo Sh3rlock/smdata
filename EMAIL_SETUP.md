@@ -1,10 +1,13 @@
 # Email Setup Guide for SMData
 
+## Hosting Platform
+This guide is configured for **Railway** hosting. 
+
 ## Problem
 Emails are not being delivered to `info@smdata.dev` in production.
 
 ## Current Configuration
-The application is configured to use **Outlook/Office 365 SMTP** for email delivery (for emails purchased through GoDaddy). However, it requires environment variables to be set.
+The application is configured to use **Outlook/Office 365 SMTP** for email delivery (for emails purchased through GoDaddy). However, it requires environment variables to be set on your Railway deployment.
 
 ## Setup Instructions
 
@@ -17,47 +20,73 @@ If you purchased your email through GoDaddy:
 4. You'll use your full email address (e.g., `info@smdata.dev`) as the username
 5. Use your email account password (not your GoDaddy account password)
 
-### 2. Set Environment Variables on Heroku
+### 2. Set Environment Variables on Railway
 
-Run these commands in your terminal (replace with your actual values):
+You can set environment variables through the Railway dashboard or CLI:
+
+**Option 1: Railway Dashboard (Recommended)**
+1. Go to your Railway project dashboard
+2. Select your service
+3. Go to the **Variables** tab
+4. Add these variables:
+   - `EMAIL_HOST_USER` = `info@smdata.dev`
+   - `EMAIL_HOST_PASSWORD` = `your-email-password`
+   - `DEFAULT_FROM_EMAIL` = `info@smdata.dev` (optional, defaults to info@smdata.dev)
+   - `EMAIL_HOST` = `smtp.office365.com` (optional, if needed)
+   - `EMAIL_PORT` = `587` (optional, if needed)
+
+**Option 2: Railway CLI**
 
 ```bash
 # Set your email address (the full email like info@smdata.dev)
-heroku config:set EMAIL_HOST_USER=info@smdata.dev
+railway variables set EMAIL_HOST_USER=info@smdata.dev
 
 # Set your email password
-heroku config:set EMAIL_HOST_PASSWORD=your-email-password
+railway variables set EMAIL_HOST_PASSWORD=your-email-password
 
-# SMTP host (defaults to smtp.office365.com - don't change unless needed)
-# Optional: heroku config:set EMAIL_HOST=smtp.office365.com
+# Optional: Set custom from email address
+railway variables set DEFAULT_FROM_EMAIL=info@smdata.dev
 
-# Port (defaults to 587 - don't change unless needed)
-# Optional: heroku config:set EMAIL_PORT=587
+# Optional: Set SMTP host (defaults to smtp.office365.com)
+railway variables set EMAIL_HOST=smtp.office365.com
 
-# Optional: Set custom from email address (defaults to info@smdata.dev)
-heroku config:set DEFAULT_FROM_EMAIL=info@smdata.dev
+# Optional: Set SMTP port (defaults to 587)
+railway variables set EMAIL_PORT=587
 ```
 
 ### 3. Verify Configuration
 
-Check your environment variables:
+**In Railway Dashboard:**
+- Go to your service → **Variables** tab
+- Verify all variables are set correctly
+
+**Using Railway CLI:**
 ```bash
-heroku config:get EMAIL_HOST_USER
-heroku config:get EMAIL_HOST_PASSWORD
-heroku config:get DEFAULT_FROM_EMAIL
+railway variables
 ```
 
-### 4. Restart Your Application
+### 4. Deploy/Restart Your Application
 
+Changes to environment variables will automatically trigger a redeploy in Railway. If you need to manually restart:
+
+**In Railway Dashboard:**
+- Go to your service → Click the three dots menu → **Restart**
+
+**Using Railway CLI:**
 ```bash
-heroku restart
+railway restart
 ```
 
 ### 5. Check Logs
 
-After restarting, check the logs to see which email backend is configured:
+After deployment, check the logs to see which email backend is configured:
+
+**In Railway Dashboard:**
+- Go to your service → **Deployments** tab → Click on the latest deployment → View logs
+
+**Using Railway CLI:**
 ```bash
-heroku logs --tail
+railway logs
 ```
 
 You should see one of these messages:
@@ -72,15 +101,13 @@ Try submitting a test message through the contact form on your website.
 
 ### If emails still don't work:
 
-1. **Check Heroku logs for errors:**
-   ```bash
-   heroku logs --tail
-   ```
+1. **Check Railway logs for errors:**
+   - In Railway Dashboard: Service → **Deployments** → Latest deployment → View logs
+   - Or use CLI: `railway logs`
 
 2. **Verify credentials are set:**
-   ```bash
-   heroku config
-   ```
+   - In Railway Dashboard: Service → **Variables** tab
+   - Or use CLI: `railway variables`
 
 3. **Check if you're using the correct email credentials:**
    - The `EMAIL_HOST_USER` must be your full email address (e.g., `info@smdata.dev`)
@@ -88,7 +115,7 @@ Try submitting a test message through the contact form on your website.
 
 4. **Test email manually in Django shell:**
    ```bash
-   heroku run python manage.py shell
+   railway run python manage.py shell
    ```
    Then in the shell:
    ```python
