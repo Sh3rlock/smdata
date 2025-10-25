@@ -7,5 +7,7 @@ from django.conf import settings
 urlpatterns = [
     path('', views.index, name='index'),
     path('contact/', views.contact_form, name='contact_form'),
+    path('privacy/', views.privacy, name='privacy'),
+    path('terms/', views.terms, name='terms'),
 ]
 

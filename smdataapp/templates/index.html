@@ -90,13 +90,13 @@ div[id*="chatbot-widget"] {
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
                     <a class="navbar-brand" href="#home">
-                        <img src="{% static 'assets/img/logo3.png' %}" class="logo" alt="Logo">
+                        <img src="{% static 'assets/img/logo5.png' %}" class="logo" alt="Logo">
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <div class="collapse-header">
-                        <img src="{% static 'assets/img/logo3.png' %}" alt="Logo">
+                        <img src="{% static 'assets/img/logo5.png' %}" alt="Logo">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-times"></i></button>
                     </div>
 
@@ -148,32 +148,19 @@ div[id*="chatbot-widget"] {
             <div class="swiper-wrapper">
                 <div class="swiper-slide banner-style-two">
                     <div class="container">
-                        <div class="row align-center">
-                            <div class="col-xl-7 col-lg-9">
+                        <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+                            <div class="col-xl-8 col-lg-10 text-center">
                                 <div class="content">
                                     <h2>{% trans "Smart Web, Data & Automation Solutions" %}</h2>
                                     <p>{% trans "smdata.dev builds modern Django web applications, data dashboards, and automations that save time and empower small businesses to scale efficiently." %}</p>
                                     <div class="button">
-                                        <div class="dropdown">
-                                            <button class="btn btn-theme btn-md radius animation dropdown-toggle" type="button" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                {% trans "Get a Quote" %}
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                                <li><a class="dropdown-item" href="#contact" data-service="web-apps">{% trans "Custom Web Applications" %}</a></li>
-                                                <li><a class="dropdown-item" href="#contact" data-service="automation">{% trans "Automation & Integrations" %}</a></li>
-                                                <li><a class="dropdown-item" href="#contact" data-service="dashboards">{% trans "Data Dashboards" %}</a></li>
-                                                <li><a class="dropdown-item" href="#contact" data-service="maintenance">{% trans "Maintenance & Hosting" %}</a></li>
-                                                <li><hr class="dropdown-divider"></li>
-                                                <li><a class="dropdown-item" href="#contact" data-service="general">{% trans "General Inquiry" %}</a></li>
-                                            </ul>
-                                        </div>
+                                        <a href="#contact" class="btn btn-theme btn-md radius animation">
+                                            {% trans "Tell us about your needs" %}
+                                        </a>
                                     </div>
                                     <div class="shape-circle"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="banner-thumb">
-                            <img src="{% static 'assets/img/illustration/pers8.png' %}" alt="illustration">
                         </div>
                     </div>
                     <div class="banner-shape-right" style="background: url({% static 'assets/img/shape/2.png' %});"></div>
@@ -196,15 +183,15 @@ div[id*="chatbot-widget"] {
                 <div class="feature-style-three hover-active-item active">
                     <div class="item">
                         <div class="icon"><img src="{% static 'assets/img/icon/18.png' %}" alt=""></div>
-                        <h4>{% trans "Automation & Integrations" %}</h4>
-                        <p>{% trans "Connect Stripe, Google APIs, or Twilio SMS to automate daily operations and eliminate manual work." %}</p>
+                        <h4>{% trans "Data Processing & Reporting" %}</h4>
+                        <p>{% trans "Process, analyze, and visualize data with automated reporting, real-time dashboards using tools like Looker Studio, or custom solutions." %}</p>
                     </div>
                 </div>
                 <div class="feature-style-three hover-active-item">
                     <div class="item">
                         <div class="icon"><img src="{% static 'assets/img/icon/20.png' %}" alt=""></div>
-                        <h4>{% trans "Data Dashboards" %}</h4>
-                        <p>{% trans "Visualize and monitor key metrics in real-time using Chart.js, Looker Studio, or custom Django dashboards." %}</p>
+                        <h4>{% trans "Automation & Integrations" %}</h4>
+                        <p>{% trans "Connect Stripe, Google APIs, or custom integrations to automate daily operations and eliminate manual work." %}</p>
                     </div>
                 </div>
                 <div class="feature-style-three hover-active-item">
@@ -282,7 +269,7 @@ div[id*="chatbot-widget"] {
             <div class="row">
                 <div class="contact-stye-one col-lg-5 pt-220 pt-md-120 pt-xs-50">
                     <div class="contact-style-one-info">
-                        <h2 class="split-text">{% trans "Let’s Build Something Smart" %}</h2>
+                        <h2 class="split-text" style="padding-bottom: 5px;">{% trans "Let’s Build Something Smart" %}</h2>
                         <p>{% trans "Tell us about your project, challenge, or idea — and we’ll show you how technology can make it faster, simpler, and more efficient." %}</p>
                         <ul>
                             <li><div class="icon"><i class="fas fa-envelope-open-text"></i></div>
@@ -296,7 +283,7 @@ div[id*="chatbot-widget"] {
                 <div class="contact-stye-one col-lg-7 pl-60 pl-md-15 pl-xs-15 mt-md-50">
                     <div class="contact-form-style-one wow fadeInLeft" data-wow-delay="150ms">
                         <h5 class="sub-title">{% trans "Get in Touch" %}</h5>
-                        <h2 class="title">{% trans "Request a Free Consultation" %}</h2>
+                        <h2 class="title">{% trans "Tell us about your needs" %}</h2>
                         <form id="contactForm" action="{% url 'contact_form' %}" method="POST" class="contact-form">
                             {% csrf_token %}
                             <div id="message" style="display: none; margin-bottom: 20px; padding: 10px; border-radius: 5px;"></div>
@@ -313,6 +300,16 @@ div[id*="chatbot-widget"] {
                                 <div class="col-lg-12"><div class="form-group comments">
                                     <textarea class="form-control" id="comments" name="comments" placeholder="{% trans 'Tell us about your project' %} *" required></textarea>
                                 </div></div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <div class="d-flex align-items-center">
+                                            <input class="me-2" style="margin-bottom: 5px !important;" type="checkbox" id="terms" name="terms" required>
+                                            <label for="terms">
+                                                {% trans "I accept the" %} <a href="{% url 'terms' %}" target="_blank" class="text-primary">{% trans "Terms and Conditions" %}</a> *
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-lg-12">
                                     <button type="submit" name="submit" id="submit">
                                         <i class="fa fa-paper-plane"></i> {% trans "Send Message" %}
@@ -334,7 +331,7 @@ div[id*="chatbot-widget"] {
                 <div class="row">
                     <div class="col-lg-4 col-md-6 footer-item pr-50 pr-xs-15">
                         <div class="f-item about">
-                            <img class="logo" src="{% static 'assets/img/logo3.png' %}" alt="Logo">
+                            <img class="logo" src="{% static 'assets/img/logo5.png' %}" alt="Logo">
                             <p>{% trans "smdata.dev helps businesses automate workflows and make data-driven decisions through Django web development, integrations, and smart analytics." %}</p>
                             <ul class="footer-social">
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -378,8 +375,8 @@ div[id*="chatbot-widget"] {
                     </div>
                     <div class="col-lg-6 text-end">
                         <ul>
-                            <li><a href="#">{% trans "Privacy Policy" %}</a></li>
-                            <li><a href="#">{% trans "Terms of Service" %}</a></li>
+                            <li><a href="{% url 'privacy' %}">{% trans "Privacy Policy" %}</a></li>
+                            <li><a href="{% url 'terms' %}">{% trans "Terms of Service" %}</a></li>
                         </ul>
                     </div>
                 </div>

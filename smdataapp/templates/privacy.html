@@ -1,0 +1,110 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Privacy Policy" %} - smdata.dev</title>
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h1 class="display-4 mb-3">{% trans "Privacy Policy" %}</h1>
+                    <p class="lead">{% trans "Last updated: " %}{% now "F d, Y" %}</p>
+                </div>
+
+                <div class="privacy-content">
+                    <h2>{% trans "1. Information We Collect" %}</h2>
+                    <p>{% trans "We collect information you provide directly to us, such as when you:" %}</p>
+                    <ul>
+                        <li>{% trans "Fill out our contact form (name, email, phone, project details)" %}</li>
+                        <li>{% trans "Communicate with us via email" %}</li>
+                        <li>{% trans "Use our website services" %}</li>
+                    </ul>
+
+                    <h2>{% trans "2. How We Use Your Information" %}</h2>
+                    <p>{% trans "We use the information we collect to:" %}</p>
+                    <ul>
+                        <li>{% trans "Respond to your inquiries and provide customer support" %}</li>
+                        <li>{% trans "Communicate with you about our services" %}</li>
+                        <li>{% trans "Improve our website and services" %}</li>
+                        <li>{% trans "Comply with legal obligations" %}</li>
+                    </ul>
+
+                    <h2>{% trans "3. Information Sharing" %}</h2>
+                    <p>{% trans "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except:" %}</p>
+                    <ul>
+                        <li>{% trans "When required by law" %}</li>
+                        <li>{% trans "To protect our rights and safety" %}</li>
+                        <li>{% trans "With trusted service providers who assist us in operating our website" %}</li>
+                    </ul>
+
+                    <h2>{% trans "4. Data Security" %}</h2>
+                    <p>{% trans "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure." %}</p>
+
+                    <h2>{% trans "5. Cookies and Tracking" %}</h2>
+                    <p>{% trans "Our website may use cookies to enhance your browsing experience. You can choose to disable cookies through your browser settings, though this may affect website functionality." %}</p>
+
+                    <h2>{% trans "6. Data Retention" %}</h2>
+                    <p>{% trans "We retain your personal information only as long as necessary to fulfill the purposes outlined in this privacy policy, unless a longer retention period is required by law." %}</p>
+
+                    <h2>{% trans "7. Your Rights" %}</h2>
+                    <p>{% trans "You have the right to:" %}</p>
+                    <ul>
+                        <li>{% trans "Access your personal information" %}</li>
+                        <li>{% trans "Correct inaccurate data" %}</li>
+                        <li>{% trans "Request deletion of your data" %}</li>
+                        <li>{% trans "Withdraw consent at any time" %}</li>
+                    </ul>
+
+                    <h2>{% trans "8. Third-Party Links" %}</h2>
+                    <p>{% trans "Our website may contain links to third-party websites. We are not responsible for the privacy practices of these external sites." %}</p>
+
+                    <h2>{% trans "9. Children's Privacy" %}</h2>
+                    <p>{% trans "Our services are not directed to children under 14. We do not knowingly collect personal information from children under 14." %}</p>
+
+                    <h2>{% trans "10. Changes to This Policy" %}</h2>
+                    <p>{% trans "We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page." %}</p>
+
+                    <h2>{% trans "11. Contact Us" %}</h2>
+                    <p>{% trans "If you have any questions about this Privacy Policy, please contact us at:" %}</p>
+                    <ul>
+                        <li>{% trans "Email: " %}<a href="mailto:info@smdata.dev">info@smdata.dev</a></li>
+                        <li>{% trans "Location: Romania" %}</li>
+                    </ul>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="{% url 'index' %}" class="btn btn-primary">{% trans "Back to Home" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .privacy-content h2 {
+            color: #333;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+        }
+        .privacy-content p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .privacy-content ul {
+            margin-bottom: 1rem;
+        }
+        .privacy-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</body>
+</html>

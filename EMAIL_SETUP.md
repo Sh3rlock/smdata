@@ -139,11 +139,12 @@ EMAIL_PORT=25
 
 If the default doesn't work, try these configurations:
 
-### GoDaddy with SMTP Authentication
+### GoDaddy with SMTP Authentication (Recommended)
 ```bash
 EMAIL_HOST=smtpout.secureserver.net
-EMAIL_PORT=80
+EMAIL_PORT=587
 ```
+**Note:** Railway may still block this. If it times out, consider using SendGrid instead.
 
 ### GoDaddy (Office365)
 ```bash

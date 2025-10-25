@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 11:55+0300\n"
+"POT-Creation-Date: 2025-10-25 14:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,324 +19,539 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
 "2:1));\n"
 
-#: smdataapp/templates/index.html:94
+#: smdataapp/templates/index.html:104 smdataapp/templates/index.html:351
 msgid "Home"
 msgstr "Acasă"
 
-#: smdataapp/templates/index.html:97
+#: smdataapp/templates/index.html:105 smdataapp/templates/index.html:352
 msgid "Services"
 msgstr "Servicii"
 
-#: smdataapp/templates/index.html:100
+#: smdataapp/templates/index.html:106 smdataapp/templates/index.html:353
 msgid "About"
 msgstr "Despre"
 
-#: smdataapp/templates/index.html:103
+#: smdataapp/templates/index.html:107 smdataapp/templates/index.html:354
 msgid "Process"
 msgstr "Proces"
 
-#: smdataapp/templates/index.html:106
-msgid "Blog"
-msgstr "Blog"
-
-#: smdataapp/templates/index.html:109 smdataapp/templates/index.html:659
+#: smdataapp/templates/index.html:108 smdataapp/templates/index.html:355
+#: smdataapp/templates/index.html:362
 msgid "Contact"
 msgstr "Contact"
 
-#: smdataapp/templates/index.html:124
+#: smdataapp/templates/index.html:132
 msgid "Have any Questions?"
 msgstr "Ai întrebări?"
 
-#: smdataapp/templates/index.html:170
-msgid "Welcome to my site!"
-msgstr "Bine ai venit pe site-ul meu!"
+#: smdataapp/templates/index.html:154
+msgid "Smart Web, Data & Automation Solutions"
+msgstr "Soluții web inteligente, de date și automatizare"
 
-#: smdataapp/templates/index.html:171
-msgid "AI-Powered Web & Automation Solutions"
-msgstr "Soluții web și de automatizare bazate pe inteligență artificială"
-
-#: smdataapp/templates/index.html:172
+#: smdataapp/templates/index.html:155
 msgid ""
-"Personalized Django applications, smart chatbots, dashboards, booking "
-"systems, and business automation."
-msgstr ""
-"Aplicații Django personalizate, chatboți inteligenți, panouri de control, "
-"sisteme de rezervare și automatizare a afacerii."
+"smdata.dev builds modern Django web applications, data dashboards, and "
+"automations that save time and empower small businesses to scale efficiently."
+msgstr "automatizări care economisesc timp și împuternicesc întreprinderile mici să se dezvolte eficient."
 
-#: smdataapp/templates/index.html:174
-msgid "Get a Quote"
-msgstr "Cere o ofertă"
+#: smdataapp/templates/index.html:158 smdataapp/templates/index.html:289
+msgid "Tell us about your needs"
+msgstr "Spune-ne despre nevoile tale"
 
-#: smdataapp/templates/index.html:225 smdataapp/templates/index.html:669
-msgid "Custom Websites"
-msgstr "Site-uri personalizate"
+#: smdataapp/templates/index.html:182
+msgid "Custom Web Applications"
+msgstr "Aplicații web personalizate"
 
-#: smdataapp/templates/index.html:226
+#: smdataapp/templates/index.html:183
 msgid ""
-"Modern, scalable web platforms tailor-made for your business or service "
-"model."
-msgstr ""
-"Platforme web moderne și scalabile, create special pentru afacerea sau modelul tău de servicii."
+"Tailor-made Django platforms for booking, quoting, invoicing, or managing "
+"your business — fast, secure, and scalable."
+msgstr "Platforme Django personalizate pentru rezervări, oferte, facturare sau gestionarea afacerii dumneavoastră — rapidă, sigură și scalabilă."
 
-#: smdataapp/templates/index.html:239
-msgid "AI Chatbots & Messaging"
-msgstr "Chatboți AI și mesagerie"
+#: smdataapp/templates/index.html:189
+msgid "Automation & Integrations"
+msgstr "Automatizare și integrări"
 
-#: smdataapp/templates/index.html:240
+#: smdataapp/templates/index.html:190
 msgid ""
-"Chatbots for Messenger, WhatsApp, Instagram, or your website – multilingual "
-"and ready to automate support or sales."
-msgstr ""
-"Chatboți pentru Messenger, WhatsApp, Instagram sau site-ul tău – multilingvi și gata să automatizeze suportul sau vânzările."
+"Connect Stripe, Google APIs, or custom integrations to automate daily "
+"operations and eliminate manual work."
+msgstr "Conectați Stripe, Google APIs sau integrări personalizate pentru a automatiza operațiunile zilnice și elimina munca manuală."
 
-#: smdataapp/templates/index.html:253
-msgid "Booking & Gift Card Modules"
-msgstr "Module de rezervare și carduri cadou"
+#: smdataapp/templates/index.html:196
+msgid "Data Processing & Reporting"
+msgstr "Procesare date și raportare"
 
-#: smdataapp/templates/index.html:254
+#: smdataapp/templates/index.html:197
 msgid ""
-"Let customers schedule services or send branded gift cards, seamlessly "
-"integrated into your site."
-msgstr ""
-"Permite clienților să programeze servicii sau să trimită carduri cadou personalizate, integrate perfect în site-ul tău."
+"Process, analyze, and visualize data with automated reporting, real-time "
+"dashboards using tools like Looker Studio, or custom solutions."
+msgstr "Procesați, analizați și vizualizați date cu raportare automatizată, dashboard-uri în timp real folosind instrumente precum Looker Studio, sau soluții personalizate."
 
-#: smdataapp/templates/index.html:267
-msgid "Data Dashboards & Automations"
-msgstr "Panouri de date și automatizări"
+#: smdataapp/templates/index.html:203
+msgid "Maintenance & Hosting"
+msgstr "Întreținere și hosting"
 
-#: smdataapp/templates/index.html:268
+#: smdataapp/templates/index.html:204
 msgid ""
-"Turn business data into insights using Google Drive projects, real-time "
-"dashboards, and task automation agents."
-msgstr ""
-"Transformă datele afacerii în informații utile folosind proiecte Google Drive, panouri în timp real și agenți de automatizare."
+"We handle hosting, backups, updates, and security — keeping your systems "
+"reliable and up to date."
+msgstr "Ne ocupăm de hosting, backup-uri, actualizări și securitate — menținând sistemele dumneavoastră fiabile și actualizate."
 
-#: smdataapp/templates/index.html:288
-msgid "About Company"
-msgstr "Despre companie"
+#: smdataapp/templates/index.html:217
+msgid "About smdata.dev"
+msgstr "Despre smdata.dev"
 
-#: smdataapp/templates/index.html:289
-msgid "Digital tools to simplify and grow your business"
-msgstr "Instrumente digitale pentru a-ți simplifica și dezvolta afacerea"
+#: smdataapp/templates/index.html:218
+msgid "Building digital systems that work for you"
+msgstr "Construim sisteme digitale care funcționează pentru dumneavoastră"
 
-#: smdataapp/templates/index.html:292
+#: smdataapp/templates/index.html:221
 msgid ""
-"I help businesses and professionals by building web solutions that automate, "
-"simplify, and convert. Whether it’s a smart quote system, AI chatbot, or "
-"real-time analytics dashboard, I turn your processes into efficient, user-"
-"friendly digital tools."
-msgstr ""
-"Ajut afacerile și profesioniștii prin soluții web care automatizează, simplifică și eficientizează. "
-"Fie că este un sistem inteligent de oferte, un chatbot AI sau un panou de analiză în timp real, "
-"transform procesele tale în instrumente digitale prietenoase și eficiente."
+"We combine web development, database expertise, and automation to create "
+"tools that simplify your operations and grow your business. Each solution is "
+"fully customized — designed around your goals, not templates."
+msgstr "Combinăm dezvoltarea web, expertiza în baze de date și automatizarea pentru a crea instrumente care îți simplifică operațiunile și îți dezvoltă afacerea. Fiecare soluție este complet personalizată — proiectată în jurul obiectivelor tale, nu a șabloanelor."
 
-#: smdataapp/templates/index.html:312
-msgid "High Quality Work"
-msgstr "Lucrări de înaltă calitate"
-
-#: smdataapp/templates/index.html:318
-msgid "All Clients Satisfaction"
-msgstr "Satisfacția tuturor clienților"
-
-#: smdataapp/templates/index.html:324
-msgid "Money Back Guarantee"
-msgstr "Garanție de returnare a banilor"
-
-#: smdataapp/templates/index.html:349
+#: smdataapp/templates/index.html:234
 msgid "Work Process"
 msgstr "Procesul de lucru"
 
-#: smdataapp/templates/index.html:350
-msgid "How we’ll work together"
-msgstr "Cum vom colabora"
+#: smdataapp/templates/index.html:235
+msgid "How We Work Together"
+msgstr "Cum lucrăm împreună"
 
-#: smdataapp/templates/index.html:353
+#: smdataapp/templates/index.html:238
 msgid ""
-"I work with entrepreneurs and growing businesses to deliver smart digital "
-"solutions — from AI-powered chatbots to personalized Django platforms and "
-"business dashboards. Every project begins with your goals and ends with a "
-"tailored system that works, automates, and scales."
-msgstr ""
-"Lucrez cu antreprenori și afaceri în creștere pentru a oferi soluții digitale inteligente — "
-"de la chatboți AI până la platforme Django personalizate și panouri de control pentru afaceri. "
-"Fiecare proiect începe cu obiectivele tale și se încheie cu un sistem adaptat care funcționează, "
-"automatizează și poate fi scalat."
+"Every collaboration starts with your idea and ends with a custom, ready-to-"
+"use system. Simple process, powerful results."
+msgstr "Fiecare colaborare începe cu ideea ta și se termină cu un sistem personalizat, gata de utilizare. Proces simplu, rezultate puternice."
 
-#: smdataapp/templates/index.html:364
-msgid "Pick your service"
-msgstr "Alege serviciul dorit"
+#: smdataapp/templates/index.html:247
+msgid "Discovery & Planning"
+msgstr "Descoperire și planificare"
 
-#: smdataapp/templates/index.html:365
-msgid "Choose from ready-made services or request a custom web/automation solution."
-msgstr "Alege dintre serviciile gata făcute sau solicită o soluție personalizată web/automatizare."
+#: smdataapp/templates/index.html:248
+msgid ""
+"We analyze your goals, map your data, and design the perfect structure for "
+"your system."
+msgstr "Analizăm obiectivele tale, mapezăm datele tale și proiectăm structura perfectă pentru sistemul tău."
 
-#: smdataapp/templates/index.html:376
-msgid "Analysis & Planning"
-msgstr "Analiză și planificare"
+#: smdataapp/templates/index.html:254
+msgid "Development & Integration"
+msgstr "Dezvoltare și integrare"
 
-#: smdataapp/templates/index.html:377
-msgid "I review your needs and design the best system using Django, AI, and automation tools."
-msgstr "Îți analizez nevoile și proiectez cel mai bun sistem folosind Django, inteligență artificială și instrumente de automatizare."
+#: smdataapp/templates/index.html:255
+msgid ""
+"Using Django, Python, and automation tools, we build, connect, and test your "
+"platform."
+msgstr "Folosind Django, Python și instrumente de automatizare, construim, conectăm și testăm platforma ta."
 
-#: smdataapp/templates/index.html:388
+#: smdataapp/templates/index.html:261
 msgid "Launch & Support"
 msgstr "Lansare și suport"
 
-#: smdataapp/templates/index.html:389
-msgid "You get a professional, secure solution, with ongoing support and subscription-based upgrades."
-msgstr "Primești o soluție profesională și sigură, cu suport continuu și actualizări pe bază de abonament."
+#: smdataapp/templates/index.html:262
+msgid ""
+"We deploy your system with full documentation, training, and optional "
+"ongoing maintenance."
+msgstr "Implementăm sistemul tău cu documentație completă, instruire și întreținere continuă opțională."
 
-#: smdataapp/templates/index.html:413
-msgid "Latest Blog"
-msgstr "Ultimele articole"
+#: smdataapp/templates/index.html:275
+msgid "Let's Build Something Smart"
+msgstr "Să construim ceva inteligent"
 
-#: smdataapp/templates/index.html:414
-msgid "News & Update"
-msgstr "Știri și noutăți"
+#: smdataapp/templates/index.html:276
+msgid ""
+"Tell us about your project, challenge, or idea — and we'll show you how "
+"technology can make it faster, simpler, and more efficient."
+msgstr "Spune-ne despre proiectul, provocarea sau ideea ta — și îți vom arăta cum tehnologia o poate face mai rapidă, mai simplă și mai eficientă."
 
-#: smdataapp/templates/index.html:427
-msgid "Finance"
-msgstr "Finanțe"
+#: smdataapp/templates/index.html:279
+msgid "Email"
+msgstr ""
 
-#: smdataapp/templates/index.html:432 smdataapp/templates/index.html:458 smdataapp/templates/index.html:479
-msgid "Md Sohag"
-msgstr "Md Sohag"
-
-#: smdataapp/templates/index.html:440
-msgid "Considered imprudence of he friendship many variations boisterous."
-msgstr "Imprudența prieteniei a fost exprimată în multe forme zgomotoase."
-
-#: smdataapp/templates/index.html:442
-msgid "Easy mind life fact with see has bore ten. Parish any chatty can elinor direct for former. Up as meant widow equal."
-msgstr "O viață ușoară și senină – a dus la plictiseală de zece ori. Oricine din parohie poate fi ghidat de Elinor. Egalitate destinată unei văduve."
-
-#: smdataapp/templates/index.html:453
-msgid "Success"
-msgstr "Succes"
-
-#: smdataapp/templates/index.html:466
-msgid "Perceived determine departure explained no forfeited he something an."
-msgstr "A perceput nevoia plecării fără a pierde ceva esențial."
-
-#: smdataapp/templates/index.html:474
-msgid "Analysis"
-msgstr "Analiză"
-
-#: smdataapp/templates/index.html:487
-msgid "Discovery incommode earnestly commanded if."
-msgstr "Descoperirea a fost impusă cu seriozitate, chiar dacă a incomodat."
-
-#: smdataapp/templates/index.html:517
-msgid "Contact Information"
-msgstr "Informații de contact"
-
-#: smdataapp/templates/index.html:519
-msgid "Tell me about your business — and I’ll create something that saves you time, boosts conversions, or both."
-msgstr "Spune-mi despre afacerea ta — și voi crea ceva care îți economisește timp, îți crește conversiile sau ambele."
-
-#: smdataapp/templates/index.html:526
-msgid "Hotline"
-msgstr "Linie telefonică"
-
-#: smdataapp/templates/index.html:535
-msgid "Our Location"
+#: smdataapp/templates/index.html:281
+#, fuzzy
+#| msgid "Our Location"
+msgid "Location"
 msgstr "Locația noastră"
 
-#: smdataapp/templates/index.html:536
-msgid "55 Main Street, The Grand Avenue 2nd Block, <br> New York City"
-msgstr "Strada Principală 55, The Grand Avenue, Blocul 2, <br> New York City"
-
-#: smdataapp/templates/index.html:544
-msgid "Official Email"
-msgstr "Email oficial"
-
-#: smdataapp/templates/index.html:554
-msgid "Have Questions?"
-msgstr "Ai întrebări?"
-
-#: smdataapp/templates/index.html:555
-msgid "Send us a Massage"
-msgstr "Trimite-ne un mesaj"
-
-#: smdataapp/templates/index.html:560
-msgid "Name"
-msgstr "Nume"
-
-#: smdataapp/templates/index.html:574
-msgid "Phone"
-msgstr "Telefon"
-
-#: smdataapp/templates/index.html:582
-msgid "Tell Us About Project"
-msgstr "Spune-ne despre proiect"
-
-#: smdataapp/templates/index.html:589
+#: smdataapp/templates/index.html:288
 msgid "Get in Touch"
 msgstr "Ia legătura cu noi"
 
-#: smdataapp/templates/index.html:617
-msgid "SM Data helps small and mid-sized businesses automate their digital workflow through Django web development, AI chatbot integration, and business dashboards."
-msgstr "SM Data ajută afacerile mici și mijlocii să își automatizeze fluxurile digitale prin dezvoltare web Django, integrarea chatboturilor AI și panouri de control pentru afaceri."
+#: smdataapp/templates/index.html:295
+msgid "Name"
+msgstr "Nume"
 
-#: smdataapp/templates/index.html:644
-msgid "Our Company"
-msgstr "Compania noastră"
+#: smdataapp/templates/index.html:301
+msgid "Phone"
+msgstr "Telefon"
 
-#: smdataapp/templates/index.html:647
-msgid "Compnay Profile"
-msgstr "Profil companie"
+#: smdataapp/templates/index.html:304
+msgid "Tell us about your project"
+msgstr "Spune-ne despre proiectul tău"
 
-#: smdataapp/templates/index.html:650
-msgid "Help Center"
-msgstr "Centru de ajutor"
+#: smdataapp/templates/index.html:311
+msgid "I accept the"
+msgstr "Accept"
 
-#: smdataapp/templates/index.html:653
-msgid "Career"
-msgstr "Carieră"
+#: smdataapp/templates/index.html:311 smdataapp/templates/terms.html:8
+#: smdataapp/templates/terms.html:18
+msgid "Terms and Conditions"
+msgstr "Termeni și condiții"
 
-#: smdataapp/templates/index.html:656
-msgid "Plans & Pricing"
-msgstr "Planuri și prețuri"
+#: smdataapp/templates/index.html:318
+msgid "Send Message"
+msgstr "Trimite mesaj"
 
-#: smdataapp/templates/index.html:666
-msgid "Our Services"
-msgstr "Serviciile noastre"
+#: smdataapp/templates/index.html:338
+msgid ""
+"smdata.dev helps businesses automate workflows and make data-driven "
+"decisions through Django web development, integrations, and smart analytics."
+msgstr ""
+"smdata.dev ajută afacerile să automatizeze fluxurile de lucru și să ia decizii "
+"bazate pe date prin dezvoltare web Django, integrări și analiză inteligentă."
 
-#: smdataapp/templates/index.html:672
-msgid "AI Chatbots"
-msgstr "Chatboți AI"
+#: smdataapp/templates/index.html:349
+msgid "Quick Links"
+msgstr "Linkuri rapide"
 
-#: smdataapp/templates/index.html:675
-msgid "Data Processing"
-msgstr "Procesare date"
+#: smdataapp/templates/index.html:381 smdataapp/templates/privacy.html:8
+#: smdataapp/templates/privacy.html:18
+msgid "Privacy Policy"
+msgstr "Politica de confidențialitate"
 
-#: smdataapp/templates/index.html:678
-msgid "AI Automations"
-msgstr "Automatizări AI"
+#: smdataapp/templates/index.html:382
+msgid "Terms of Service"
+msgstr "Termeni de serviciu"
 
-#: smdataapp/templates/index.html:681
-msgid "IT Consulting"
-msgstr "Consultanță IT"
+#: smdataapp/templates/privacy.html:19 smdataapp/templates/terms.html:19
+msgid "Last updated: "
+msgstr "Ultima actualizare: "
 
-#: smdataapp/templates/index.html:688
-msgid "Get in touch"
-msgstr "Ia legătura cu noi"
+#: smdataapp/templates/privacy.html:23
+msgid "1. Information We Collect"
+msgstr "1. Informațiile pe care le colectăm"
 
-#: smdataapp/templates/index.html:716
-msgid "&copy; Copyright 2025. All Rights Reserved by"
-msgstr "© Drepturi de autor 2025. Toate drepturile rezervate de"
+#: smdataapp/templates/privacy.html:24
+msgid "We collect information you provide directly to us, such as when you:"
+msgstr "Colectăm informațiile pe care ni le furnizați direct, cum ar fi când:"
 
-#: smdataapp/templates/index.html:721
-msgid "Terms"
-msgstr "Termeni"
+#: smdataapp/templates/privacy.html:26
+msgid "Fill out our contact form (name, email, phone, project details)"
+msgstr "Completați formularul nostru de contact (nume, email, telefon, detalii proiect)"
 
-#: smdataapp/templates/index.html:724
-msgid "Privacy"
-msgstr "Confidențialitate"
+#: smdataapp/templates/privacy.html:27
+msgid "Communicate with us via email"
+msgstr "Comunicați cu noi prin email"
 
-#: smdataapp/templates/index.html:727
-msgid "Support"
-msgstr "Asistență"
+#: smdataapp/templates/privacy.html:28
+msgid "Use our website services"
+msgstr "Folosiți serviciile site-ului nostru"
+
+#: smdataapp/templates/privacy.html:31
+msgid "2. How We Use Your Information"
+msgstr "2. Cum folosim informațiile dumneavoastră"
+
+#: smdataapp/templates/privacy.html:32
+msgid "We use the information we collect to:"
+msgstr "Folosim informațiile pe care le colectăm pentru a:"
+
+#: smdataapp/templates/privacy.html:34
+msgid "Respond to your inquiries and provide customer support"
+msgstr "Răspunde la întrebările dumneavoastră și oferi suport pentru clienți"
+
+#: smdataapp/templates/privacy.html:35
+msgid "Communicate with you about our services"
+msgstr "Comunica cu dumneavoastră despre serviciile noastre"
+
+#: smdataapp/templates/privacy.html:36
+msgid "Improve our website and services"
+msgstr "Îmbunătăți site-ul și serviciile noastre"
+
+#: smdataapp/templates/privacy.html:37
+msgid "Comply with legal obligations"
+msgstr "Să respectăm obligațiile legale"
+
+#: smdataapp/templates/privacy.html:40
+msgid "3. Information Sharing"
+msgstr "3. Partajarea informațiilor"
+
+#: smdataapp/templates/privacy.html:41
+msgid ""
+"We do not sell, trade, or otherwise transfer your personal information to "
+"third parties without your consent, except:"
+msgstr "Nu vindem, nu schimbăm și nu transferăm informațiile dumneavoastră personale către terți fără consimțământul dumneavoastră, cu excepția:"
+
+#: smdataapp/templates/privacy.html:43
+msgid "When required by law"
+msgstr "Când este cerut de lege"
+
+#: smdataapp/templates/privacy.html:44
+msgid "To protect our rights and safety"
+msgstr "Pentru a ne proteja drepturile și siguranța"
+
+#: smdataapp/templates/privacy.html:45
+msgid "With trusted service providers who assist us in operating our website"
+msgstr "Cu furnizori de servicii de încredere care ne ajută să operăm site-ul"
+
+#: smdataapp/templates/privacy.html:48
+msgid "4. Data Security"
+msgstr "4. Securitatea datelor"
+
+#: smdataapp/templates/privacy.html:49
+#, python-format
+msgid ""
+"We implement appropriate security measures to protect your personal "
+"information against unauthorized access, alteration, disclosure, or "
+"destruction. However, no method of transmission over the internet is 100%% "
+"secure."
+msgstr "Implementăm măsuri de securitate adecvate pentru a proteja informațiile dumneavoastră personale împotriva accesului neautorizat, modificării, divulgării sau distrugerii. Cu toate acestea, nicio metodă de transmisie pe internet nu este 100%% sigură."
+
+#: smdataapp/templates/privacy.html:51
+msgid "5. Cookies and Tracking"
+msgstr "5. Cookie-uri și urmărire"
+
+#: smdataapp/templates/privacy.html:52
+msgid ""
+"Our website may use cookies to enhance your browsing experience. You can "
+"choose to disable cookies through your browser settings, though this may "
+"affect website functionality."
+msgstr "Site-ul nostru poate folosi cookie-uri pentru a îmbunătăți experiența dumneavoastră de navigare. Puteți alege să dezactivați cookie-urile prin setările browserului, deși acest lucru poate afecta funcționalitatea site-ului."
+
+#: smdataapp/templates/privacy.html:54
+msgid "6. Data Retention"
+msgstr "6. Păstrarea datelor"
+
+#: smdataapp/templates/privacy.html:55
+msgid ""
+"We retain your personal information only as long as necessary to fulfill the "
+"purposes outlined in this privacy policy, unless a longer retention period "
+"is required by law."
+msgstr "Păstrăm informațiile dumneavoastră personale doar atât timp cât este necesar pentru a îndeplini scopurile descrise în această politică de confidențialitate, cu excepția cazului în care o perioadă mai lungă de păstrare este cerută de lege."
+
+#: smdataapp/templates/privacy.html:57
+msgid "7. Your Rights"
+msgstr "7. Drepturile dumneavoastră"
+
+#: smdataapp/templates/privacy.html:58
+msgid "You have the right to:"
+msgstr "Aveți dreptul să:"
+
+#: smdataapp/templates/privacy.html:60
+msgid "Access your personal information"
+msgstr "Accesați informațiile dumneavoastră personale"
+
+#: smdataapp/templates/privacy.html:61
+msgid "Correct inaccurate data"
+msgstr "Corectați datele inexacte"
+
+#: smdataapp/templates/privacy.html:62
+msgid "Request deletion of your data"
+msgstr "Solicitați ștergerea datelor dumneavoastră"
+
+#: smdataapp/templates/privacy.html:63
+msgid "Withdraw consent at any time"
+msgstr "Retrageți consimțământul oricând"
+
+#: smdataapp/templates/privacy.html:66
+msgid "8. Third-Party Links"
+msgstr "8. Linkuri către terți"
+
+#: smdataapp/templates/privacy.html:67
+msgid ""
+"Our website may contain links to third-party websites. We are not "
+"responsible for the privacy practices of these external sites."
+msgstr "Site-ul nostru poate conține linkuri către site-uri web ale terților. Nu suntem responsabili pentru practicile de confidențialitate ale acestor site-uri externe."
+
+#: smdataapp/templates/privacy.html:69
+msgid "9. Children's Privacy"
+msgstr "9. Confidențialitatea copiilor"
+
+#: smdataapp/templates/privacy.html:70
+msgid ""
+"Our services are not directed to children under 14. We do not knowingly "
+"collect personal information from children under 14."
+msgstr "Serviciile noastre nu sunt destinate copiilor sub 14 ani. Nu colectăm în mod conștient informații personale de la copii sub 14 ani."
+
+#: smdataapp/templates/privacy.html:72
+msgid "10. Changes to This Policy"
+msgstr "10. Modificări ale acestei politici"
+
+#: smdataapp/templates/privacy.html:73
+msgid ""
+"We may update this privacy policy from time to time. We will notify you of "
+"any changes by posting the new policy on this page."
+msgstr "Putem actualiza această politică de confidențialitate din când în când. Vă vom notifica despre orice modificări prin postarea noii politici pe această pagină."
+
+#: smdataapp/templates/privacy.html:75
+msgid "11. Contact Us"
+msgstr "11. Contactați-ne"
+
+#: smdataapp/templates/privacy.html:76
+msgid ""
+"If you have any questions about this Privacy Policy, please contact us at:"
+msgstr "Dacă aveți întrebări despre această Politică de Confidențialitate, vă rugăm să ne contactați la:"
+
+#: smdataapp/templates/privacy.html:78 smdataapp/templates/terms.html:67
+msgid "Email: "
+msgstr "Email: "
+
+#: smdataapp/templates/privacy.html:79 smdataapp/templates/terms.html:68
+msgid "Location: Romania"
+msgstr "Locația: România"
+
+#: smdataapp/templates/privacy.html:84 smdataapp/templates/terms.html:73
+msgid "Back to Home"
+msgstr "Înapoi la pagina principală"
+
+#: smdataapp/templates/terms.html:23
+msgid "1. Acceptance of Terms"
+msgstr "1. Acceptarea termenilor"
+
+#: smdataapp/templates/terms.html:24
+msgid ""
+"By accessing and using smdata.dev services, you accept and agree to be bound "
+"by the terms and provision of this agreement. If you do not agree to abide "
+"by the above, please do not use this service."
+msgstr "Prin accesarea și utilizarea serviciilor smdata.dev, acceptați și sunteți de acord să fiți legați de termenii și prevederile acestui acord. Dacă nu sunteți de acord să respectați cele de mai sus, vă rugăm să nu utilizați acest serviciu."
+
+#: smdataapp/templates/terms.html:26
+msgid "2. Services Description"
+msgstr "2. Descrierea serviciilor"
+
+#: smdataapp/templates/terms.html:27
+msgid ""
+"smdata.dev provides web development, data processing, reporting, automation, "
+"and integration services. We specialize in Django web applications, data "
+"dashboards, and business process automation."
+msgstr "smdata.dev oferă servicii de dezvoltare web, procesare de date, raportare, automatizare și integrare. Ne specializăm în aplicații web Django, dashboard-uri de date și automatizarea proceselor de afaceri."
+
+#: smdataapp/templates/terms.html:29
+msgid "3. User Responsibilities"
+msgstr "3. Responsabilitățile utilizatorului"
+
+#: smdataapp/templates/terms.html:31
+msgid "Provide accurate and complete information when contacting us"
+msgstr "Furnizați informații exacte și complete când ne contactați"
+
+#: smdataapp/templates/terms.html:32
+msgid "Use our services in compliance with applicable laws and regulations"
+msgstr "Utilizați serviciile noastre în conformitate cu legile și reglementările aplicabile"
+
+#: smdataapp/templates/terms.html:33
+msgid "Respect intellectual property rights"
+msgstr "Respectați drepturile de proprietate intelectuală"
+
+#: smdataapp/templates/terms.html:34
+msgid "Maintain confidentiality of any sensitive information shared"
+msgstr "Mențineți confidențialitatea oricăror informații sensibile partajate"
+
+#: smdataapp/templates/terms.html:37
+msgid "4. Service Availability"
+msgstr "4. Disponibilitatea serviciilor"
+
+#: smdataapp/templates/terms.html:38
+msgid ""
+"We strive to maintain high service availability but cannot guarantee "
+"uninterrupted access. We reserve the right to modify or discontinue services "
+"with reasonable notice."
+msgstr "Ne străduim să menținem o disponibilitate ridicată a serviciilor, dar nu putem garanta accesul neîntrerupt. Ne rezervăm dreptul de a modifica sau întrerupe serviciile cu o notificare rezonabilă."
+
+#: smdataapp/templates/terms.html:40
+msgid "5. Intellectual Property"
+msgstr "5. Proprietatea intelectuală"
+
+#: smdataapp/templates/terms.html:41
+msgid ""
+"All content, designs, code, and materials created by smdata.dev remain our "
+"intellectual property unless otherwise agreed in writing. Clients retain "
+"rights to their own data and requirements."
+msgstr "Tot conținutul, designurile, codul și materialele create de smdata.dev rămân proprietatea noastră intelectuală, cu excepția cazului în care se convine altfel în scris. Clienții păstrează drepturile asupra propriilor date și cerințe."
+
+#: smdataapp/templates/terms.html:43
+msgid "6. Limitation of Liability"
+msgstr "6. Limitarea răspunderii"
+
+#: smdataapp/templates/terms.html:44
+msgid ""
+"smdata.dev shall not be liable for any indirect, incidental, special, or "
+"consequential damages arising from the use of our services."
+msgstr "smdata.dev nu va fi răspunzător pentru daune indirecte, incidentale, speciale sau consecvențiale care decurg din utilizarea serviciilor noastre."
+
+#: smdataapp/templates/terms.html:46
+msgid "7. Payment Terms"
+msgstr "7. Termenii de plată"
+
+#: smdataapp/templates/terms.html:47
+msgid ""
+"Payment terms will be specified in individual project agreements. All prices "
+"are subject to change with prior notice."
+msgstr "Termenii de plată vor fi specificați în acordurile individuale de proiect. Toate prețurile sunt supuse modificărilor cu notificare prealabilă."
+
+#: smdataapp/templates/terms.html:49
+msgid "8. Project Scope and Changes"
+msgstr "8. Domeniul proiectului și modificările"
+
+#: smdataapp/templates/terms.html:50
+msgid ""
+"Project scope will be clearly defined in written agreements. Any changes to "
+"scope may result in additional charges and timeline adjustments."
+msgstr "Domeniul proiectului va fi clar definit în acordurile scrise. Orice modificări ale domeniului pot rezulta în taxe suplimentare și ajustări ale calendarului."
+
+#: smdataapp/templates/terms.html:52
+msgid "9. Confidentiality"
+msgstr ""
+
+#: smdataapp/templates/terms.html:53
+msgid ""
+"We maintain strict confidentiality regarding client information and project "
+"details. We will not disclose sensitive information to third parties without "
+"written consent."
+msgstr ""
+
+#: smdataapp/templates/terms.html:55
+msgid "10. Termination"
+msgstr ""
+
+#: smdataapp/templates/terms.html:56
+msgid ""
+"Either party may terminate services with written notice. Upon termination, "
+"all outstanding obligations must be fulfilled and project materials will be "
+"delivered as agreed."
+msgstr ""
+
+#: smdataapp/templates/terms.html:58
+msgid "11. Governing Law"
+msgstr ""
+
+#: smdataapp/templates/terms.html:59
+msgid ""
+"These terms are governed by the laws of Romania. Any disputes will be "
+"resolved through Romanian courts."
+msgstr ""
+
+#: smdataapp/templates/terms.html:61
+msgid "12. Changes to Terms"
+msgstr ""
+
+#: smdataapp/templates/terms.html:62
+msgid ""
+"We reserve the right to modify these terms at any time. Changes will be "
+"effective immediately upon posting on our website."
+msgstr ""
+
+#: smdataapp/templates/terms.html:64
+#, fuzzy
+#| msgid "Contact Information"
+msgid "13. Contact Information"
+msgstr "Informații de contact"
+
+#: smdataapp/templates/terms.html:65
+msgid "For questions about these Terms and Conditions, please contact us at:"
+msgstr ""
 
 #: venv/lib/python3.13/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"
@@ -1561,3 +1776,209 @@ msgstr ""
 #: venv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:236
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Blog"
+#~ msgstr "Blog"
+
+#~ msgid "Welcome to my site!"
+#~ msgstr "Bine ai venit pe site-ul meu!"
+
+#~ msgid ""
+#~ "Personalized Django applications, smart chatbots, dashboards, booking "
+#~ "systems, and business automation."
+#~ msgstr ""
+#~ "Aplicații Django personalizate, chatboți inteligenți, panouri de control, "
+#~ "sisteme de rezervare și automatizare a afacerii."
+
+#~ msgid "Get a Quote"
+#~ msgstr "Cere o ofertă"
+
+#~ msgid ""
+#~ "Modern, scalable web platforms tailor-made for your business or service "
+#~ "model."
+#~ msgstr ""
+#~ "Platforme web moderne și scalabile, create special pentru afacerea sau "
+#~ "modelul tău de servicii."
+
+#~ msgid "AI Chatbots & Messaging"
+#~ msgstr "Chatboți AI și mesagerie"
+
+#~ msgid ""
+#~ "Chatbots for Messenger, WhatsApp, Instagram, or your website – "
+#~ "multilingual and ready to automate support or sales."
+#~ msgstr ""
+#~ "Chatboți pentru Messenger, WhatsApp, Instagram sau site-ul tău – "
+#~ "multilingvi și gata să automatizeze suportul sau vânzările."
+
+#~ msgid "Booking & Gift Card Modules"
+#~ msgstr "Module de rezervare și carduri cadou"
+
+#~ msgid ""
+#~ "Let customers schedule services or send branded gift cards, seamlessly "
+#~ "integrated into your site."
+#~ msgstr ""
+#~ "Permite clienților să programeze servicii sau să trimită carduri cadou "
+#~ "personalizate, integrate perfect în site-ul tău."
+
+#~ msgid "Data Dashboards & Automations"
+#~ msgstr "Panouri de date și automatizări"
+
+#~ msgid ""
+#~ "Turn business data into insights using Google Drive projects, real-time "
+#~ "dashboards, and task automation agents."
+#~ msgstr ""
+#~ "Transformă datele afacerii în informații utile folosind proiecte Google "
+#~ "Drive, panouri în timp real și agenți de automatizare."
+
+#~ msgid "About Company"
+#~ msgstr "Despre companie"
+
+#~ msgid "Digital tools to simplify and grow your business"
+#~ msgstr "Instrumente digitale pentru a-ți simplifica și dezvolta afacerea"
+
+#~ msgid ""
+#~ "I help businesses and professionals by building web solutions that "
+#~ "automate, simplify, and convert. Whether it’s a smart quote system, AI "
+#~ "chatbot, or real-time analytics dashboard, I turn your processes into "
+#~ "efficient, user-friendly digital tools."
+#~ msgstr ""
+#~ "Ajut afacerile și profesioniștii prin soluții web care automatizează, "
+#~ "simplifică și eficientizează. Fie că este un sistem inteligent de oferte, "
+#~ "un chatbot AI sau un panou de analiză în timp real, transform procesele "
+#~ "tale în instrumente digitale prietenoase și eficiente."
+
+#~ msgid "High Quality Work"
+#~ msgstr "Lucrări de înaltă calitate"
+
+#~ msgid "All Clients Satisfaction"
+#~ msgstr "Satisfacția tuturor clienților"
+
+#~ msgid "Money Back Guarantee"
+#~ msgstr "Garanție de returnare a banilor"
+
+#~ msgid ""
+#~ "I work with entrepreneurs and growing businesses to deliver smart digital "
+#~ "solutions — from AI-powered chatbots to personalized Django platforms and "
+#~ "business dashboards. Every project begins with your goals and ends with a "
+#~ "tailored system that works, automates, and scales."
+#~ msgstr ""
+#~ "Lucrez cu antreprenori și afaceri în creștere pentru a oferi soluții "
+#~ "digitale inteligente — de la chatboți AI până la platforme Django "
+#~ "personalizate și panouri de control pentru afaceri. Fiecare proiect "
+#~ "începe cu obiectivele tale și se încheie cu un sistem adaptat care "
+#~ "funcționează, automatizează și poate fi scalat."
+
+#~ msgid "Pick your service"
+#~ msgstr "Alege serviciul dorit"
+
+#~ msgid ""
+#~ "Choose from ready-made services or request a custom web/automation "
+#~ "solution."
+#~ msgstr ""
+#~ "Alege dintre serviciile gata făcute sau solicită o soluție personalizată "
+#~ "web/automatizare."
+
+#~ msgid ""
+#~ "I review your needs and design the best system using Django, AI, and "
+#~ "automation tools."
+#~ msgstr ""
+#~ "Îți analizez nevoile și proiectez cel mai bun sistem folosind Django, "
+#~ "inteligență artificială și instrumente de automatizare."
+
+#~ msgid ""
+#~ "You get a professional, secure solution, with ongoing support and "
+#~ "subscription-based upgrades."
+#~ msgstr ""
+#~ "Primești o soluție profesională și sigură, cu suport continuu și "
+#~ "actualizări pe bază de abonament."
+
+#~ msgid "Latest Blog"
+#~ msgstr "Ultimele articole"
+
+#~ msgid "News & Update"
+#~ msgstr "Știri și noutăți"
+
+#~ msgid "Finance"
+#~ msgstr "Finanțe"
+
+#~ msgid "Md Sohag"
+#~ msgstr "Md Sohag"
+
+#~ msgid "Considered imprudence of he friendship many variations boisterous."
+#~ msgstr "Imprudența prieteniei a fost exprimată în multe forme zgomotoase."
+
+#~ msgid ""
+#~ "Easy mind life fact with see has bore ten. Parish any chatty can elinor "
+#~ "direct for former. Up as meant widow equal."
+#~ msgstr ""
+#~ "O viață ușoară și senină – a dus la plictiseală de zece ori. Oricine din "
+#~ "parohie poate fi ghidat de Elinor. Egalitate destinată unei văduve."
+
+#~ msgid "Success"
+#~ msgstr "Succes"
+
+#~ msgid ""
+#~ "Perceived determine departure explained no forfeited he something an."
+#~ msgstr "A perceput nevoia plecării fără a pierde ceva esențial."
+
+#~ msgid "Analysis"
+#~ msgstr "Analiză"
+
+#~ msgid "Discovery incommode earnestly commanded if."
+#~ msgstr "Descoperirea a fost impusă cu seriozitate, chiar dacă a incomodat."
+
+#~ msgid ""
+#~ "Tell me about your business — and I’ll create something that saves you "
+#~ "time, boosts conversions, or both."
+#~ msgstr ""
+#~ "Spune-mi despre afacerea ta — și voi crea ceva care îți economisește "
+#~ "timp, îți crește conversiile sau ambele."
+
+#~ msgid "Hotline"
+#~ msgstr "Linie telefonică"
+
+#~ msgid "55 Main Street, The Grand Avenue 2nd Block, <br> New York City"
+#~ msgstr ""
+#~ "Strada Principală 55, The Grand Avenue, Blocul 2, <br> New York City"
+
+#~ msgid "Official Email"
+#~ msgstr "Email oficial"
+
+#~ msgid "Have Questions?"
+#~ msgstr "Ai întrebări?"
+
+#~ msgid "Our Company"
+#~ msgstr "Compania noastră"
+
+#~ msgid "Compnay Profile"
+#~ msgstr "Profil companie"
+
+#~ msgid "Help Center"
+#~ msgstr "Centru de ajutor"
+
+#~ msgid "Career"
+#~ msgstr "Carieră"
+
+#~ msgid "Plans & Pricing"
+#~ msgstr "Planuri și prețuri"
+
+#~ msgid "AI Chatbots"
+#~ msgstr "Chatboți AI"
+
+#~ msgid "AI Automations"
+#~ msgstr "Automatizări AI"
+
+#~ msgid "IT Consulting"
+#~ msgstr "Consultanță IT"
+
+#~ msgid "Get in touch"
+#~ msgstr "Ia legătura cu noi"
+
+#~ msgid "&copy; Copyright 2025. All Rights Reserved by"
+#~ msgstr "© Drepturi de autor 2025. Toate drepturile rezervate de"
+
+#~ msgid "Terms"
+#~ msgstr "Termeni"
+
+#~ msgid "Support"
+#~ msgstr "Asistență"
