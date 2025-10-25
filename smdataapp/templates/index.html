@@ -2,21 +2,15 @@
 {% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- ========== Meta Tags ========== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SmData - IT Solutions & Services Template">
+    <meta name="description" content="smdata.dev — Smart IT Solutions, Web Apps, and Data Automation">
 
-    <!-- ========== Page Title ========== -->
-    <title>SmData - IT Solutions & Services</title>
+    <title>smdata.dev – Smart Web & Data Solutions</title>
 
-    <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}" type="image/x-icon">
-
-    <!-- ========== Start Stylesheet ========== -->
     <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets/css/themify-icons.css' %}" rel="stylesheet">
@@ -29,125 +23,114 @@
     <link href="{% static 'assets/css/helper.css' %}" rel="stylesheet">
     <link href="{% static 'assets/css/unit-test.css' %}" rel="stylesheet">
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-    <link href="style.css' %}" rel="stylesheet">
-    <!-- ========== End Stylesheet ========== -->
-
 </head>
 
 <style>
-    .language_selector {
-        font-family: var(--font-default);
-        font-size: 19px;
-        font-weight: 500;
-        line-height: 1.7;
-        color: #232323;
-      }
-<<<<<<< HEAD
+.language_selector {
+    font-family: var(--font-default);
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #232323;
+}
+footer .logo { height: 100px !important; }
 
-      footer .logo {
-        height: 100px !important;
-      }
-=======
->>>>>>> 1e0d4f9 (Initial commit)
+/* Fix for hero section text visibility */
+.banner-style-two .content h2,
+.banner-style-two .content p,
+.banner-style-two .content .button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+.banner-style-two .swiper-slide .content h2,
+.banner-style-two .swiper-slide .content p,
+.banner-style-two .swiper-slide .content .button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+/* Hide any chatbot elements - more specific targeting */
+[data-bot-id],
+.fastbots-widget,
+.chatbot-widget,
+.chat-widget,
+.floating-chat,
+.chat-icon,
+#chatbot,
+.chatbot,
+iframe[src*="fastbots"],
+iframe[src*="chatbot"],
+div[class*="fastbots"],
+div[id*="fastbots"],
+div[class*="chatbot-widget"],
+div[id*="chatbot-widget"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
 </style>
 
 <body>
-
-    <!--[if lte IE 9]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser" %}</a> to improve your experience and security." %}</p>
-    <![endif]-->
-
-    <!-- Start Preloader 
-    ============================================= -->
+    <!-- Preloader -->
     <div id="preloader">
         <div class="tranzi-loader-inner">
-           <div class="tranzi-loader">
-              <span class="tranzi-loader-item"></span>
-              <span class="tranzi-loader-item"></span>
-              <span class="tranzi-loader-item"></span>
-              <span class="tranzi-loader-item"></span>
-              <span class="tranzi-loader-item"></span>
-              <span class="tranzi-loader-item"></span>
-              <span class="tranzi-loader-item"></span>
-              <span class="tranzi-loader-item"></span>
-           </div>
+            <div class="tranzi-loader">
+                <span class="tranzi-loader-item"></span><span class="tranzi-loader-item"></span><span class="tranzi-loader-item"></span><span class="tranzi-loader-item"></span><span class="tranzi-loader-item"></span><span class="tranzi-loader-item"></span><span class="tranzi-loader-item"></span><span class="tranzi-loader-item"></span>
+            </div>
         </div>
-     </div>
-    <!-- preloader end -->
+    </div>
 
-
-    <!-- Header 
-    ============================================= -->
+    <!-- Header -->
     <header>
-        <!-- Start Navigation -->
         <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed dark no-background">
             <div class="container d-flex justify-content-between align-items-center">
-        
-                <!-- Start Header Navigation -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="index-2.html">
-<<<<<<< HEAD
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
+                    <a class="navbar-brand" href="#home">
                         <img src="{% static 'assets/img/logo3.png' %}" class="logo" alt="Logo">
-=======
-                        <img src="{% static 'assets/img/logo.png' %}" class="logo" alt="Logo">
->>>>>>> 1e0d4f9 (Initial commit)
                     </a>
                 </div>
-                <!-- End Header Navigation -->
-        
-                <!-- Collect the nav links, forms, and other content for toggling -->
+
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <div class="collapse-header">
-<<<<<<< HEAD
                         <img src="{% static 'assets/img/logo3.png' %}" alt="Logo">
-=======
-                        <img src="{% static 'assets/img/logo.png' %}" alt="Logo">
->>>>>>> 1e0d4f9 (Initial commit)
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <i class="fa fa-times"></i>
-                        </button>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-times"></i></button>
                     </div>
-        
+
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                         <li><a href="#home">{% trans "Home" %}</a></li>
                         <li><a href="#services">{% trans "Services" %}</a></li>
                         <li><a href="#about">{% trans "About" %}</a></li>
                         <li><a href="#process">{% trans "Process" %}</a></li>
-                        <li><a href="#blog">{% trans "Blog" %}</a></li>
                         <li><a href="#contact">{% trans "Contact" %}</a></li>
-        
-                        <!-- Language Selector as menu item -->
                         <li>
                             <form action="{% url 'set_language' %}" method="post" class="language-form" style="margin: 12px 0;">
                                 {% csrf_token %}
-                                <i class="fas fa-globe" style="padding-right:5px; color:#0d6efd"></i><select name="language" class="language_selector" onchange="this.form.submit()" style="border: none; background: transparent;">
+                                <i class="fas fa-globe" style="padding-right:5px; color:#0d6efd"></i>
+                                <select name="language" class="language_selector" onchange="this.form.submit()" style="border:none;background:transparent;">
                                     {% get_current_language as LANGUAGE_CODE %}
                                     {% get_available_languages as LANGUAGES %}
                                     {% for lang in LANGUAGES %}
-                                        <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %}selected{% endif %}>
-                                            {{ lang.1 }}
-                                        </option>
+                                        <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %}selected{% endif %}>{{ lang.1 }}</option>
                                     {% endfor %}
                                 </select>
                             </form>
                         </li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
-        
+                </div>
+
                 <div class="attr-right">
                     <div class="attr-nav">
                         <ul>
                             <li class="contact">
                                 <div class="call">
-                                    <div class="icon">
-                                        <i class="fas fa-comments-alt-dollar"></i>
-                                    </div>
+                                    <div class="icon"><i class="fas fa-comments-alt-dollar"></i></div>
                                     <div class="info">
                                         <p>{% trans "Have any Questions?" %}</p>
-                                        <h5><a href="mailto:info@crysta.com">info@bestup.com</a></h5>
+                                        <h5><a href="mailto:info@smdata.dev">info@smdata.dev</a></h5>
                                     </div>
                                 </div>
                             </li>
@@ -155,569 +138,231 @@
                     </div>
                 </div>
             </div>
-        
             <div class="overlay-screen"></div>
         </nav>
-        
-        <!-- End Navigation -->
     </header>
-    <!-- End Header -->
 
-    <!-- Start Banner Area 
-    ============================================= -->
+    <!-- Hero Section -->
     <div id="home" class="banner-area banner-style-two content-right overflow-hidden bg-cover" style="background: url({% static 'assets/img/shape/banner-2.jpg' %});">
-        <!-- Slider main container -->
         <div class="banner-style-two-carousel">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-
-                <!-- Single Item -->
                 <div class="swiper-slide banner-style-two">
                     <div class="container">
                         <div class="row align-center">
                             <div class="col-xl-7 col-lg-9">
                                 <div class="content">
-<<<<<<< HEAD
-=======
-                                    <h1>{% trans "Welcome to my site!" %}</h1>
->>>>>>> 1e0d4f9 (Initial commit)
-                                    <h2>{% trans "AI-Powered Web & Automation Solutions" %}</h2>
-                                    <p>{% trans "Personalized Django applications, smart chatbots, dashboards, booking systems, and business automation." %}</p>
+                                    <h2>{% trans "Smart Web, Data & Automation Solutions" %}</h2>
+                                    <p>{% trans "smdata.dev builds modern Django web applications, data dashboards, and automations that save time and empower small businesses to scale efficiently." %}</p>
                                     <div class="button">
-                                        <a class="btn btn-theme btn-md radius animation" href="contact-us.html">{% trans "Get a Quote" %}</a>
+                                        <div class="dropdown">
+                                            <button class="btn btn-theme btn-md radius animation dropdown-toggle" type="button" id="servicesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                {% trans "Get a Quote" %}
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                                <li><a class="dropdown-item" href="#contact" data-service="web-apps">{% trans "Custom Web Applications" %}</a></li>
+                                                <li><a class="dropdown-item" href="#contact" data-service="automation">{% trans "Automation & Integrations" %}</a></li>
+                                                <li><a class="dropdown-item" href="#contact" data-service="dashboards">{% trans "Data Dashboards" %}</a></li>
+                                                <li><a class="dropdown-item" href="#contact" data-service="maintenance">{% trans "Maintenance & Hosting" %}</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="#contact" data-service="general">{% trans "General Inquiry" %}</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="shape-circle"></div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Banner Thumb -->
                         <div class="banner-thumb">
                             <img src="{% static 'assets/img/illustration/pers8.png' %}" alt="illustration">
                         </div>
-                        <!-- End Banner Thumb -->
                     </div>
-                    <!-- Start Shape -->
                     <div class="banner-shape-right" style="background: url({% static 'assets/img/shape/2.png' %});"></div>
-                    <!-- End Shape -->
-                </div>
-                <!-- End Single Item -->
-            </div>
-
-            <!-- Navigation -->
-            <div class="swiper-nav-left">
-                <div class="swiper-button-prev">
-                    <i class="fas fa-angle-left"></i>
-                </div>
-                <div class="swiper-button-next">
-                    <i class="fas fa-angle-right"></i>
                 </div>
             </div>
-
         </div>   
     </div>
-    <!-- End Main -->
 
-    
-
-    <!-- Start Our Features 
-    ============================================= -->
+    <!-- Services -->
     <div id="services" class="faeture-style-three-area">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="feature-style-three-items">
-                        <!-- Single Item -->
-                        <div class="feature-style-three hover-active-item">
-                            <div class="shape">
-                                <img src="{% static 'assets/img/shape/23.png' %}" alt="Image Not Found">
-                            </div>
-                            <div class="item">
-                                <div class="icon">
-                                    <img src="{% static 'assets/img/icon/17.png' %}" alt="Image Not Found">
-                                </div>
-                                <h4>{% trans "Custom Websites" %}</h4>
-                                <p>{% trans "Modern, scalable web platforms tailor-made for your business or service model." %}</p>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="feature-style-three hover-active-item active">
-                            <div class="shape">
-                                <img src="{% static 'assets/img/shape/23.png' %}" alt="Image Not Found">
-                            </div>
-                            <div class="item">
-                                <div class="icon">
-                                    <img src="{% static 'assets/img/icon/18.png' %}" alt="Image Not Found">
-                                </div>
-                                <h4>{% trans "AI Chatbots & Messaging" %}</h4>
-                                    <p>{% trans "Chatbots for Messenger, WhatsApp, Instagram, or your website – multilingual and ready to automate support or sales." %}</p>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="feature-style-three hover-active-item">
-                            <div class="shape">
-                                <img src="{% static 'assets/img/shape/23.png' %}" alt="Image Not Found">
-                            </div>
-                            <div class="item">
-                                <div class="icon">
-                                    <img src="{% static 'assets/img/icon/19.png' %}" alt="Image Not Found">
-                                </div>
-                                <h4>{% trans "Booking & Gift Card Modules" %}</h4>
-                                <p>{% trans "Let customers schedule services or send branded gift cards, seamlessly integrated into your site." %}</p>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="feature-style-three hover-active-item">
-                            <div class="shape">
-                                <img src="{% static 'assets/img/shape/23.png' %}" alt="Image Not Found">
-                            </div>
-                            <div class="item">
-                                <div class="icon">
-                                    <img src="{% static 'assets/img/icon/20.png' %}" alt="Image Not Found">
-                                </div>
-                                <h4>{% trans "Data Dashboards & Automations" %}</h4>
-                                <p>{% trans "Turn business data into insights using Google Drive projects, real-time dashboards, and task automation agents." %}</p>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
+            <div class="feature-style-three-items">
+                <div class="feature-style-three hover-active-item">
+                    <div class="item">
+                        <div class="icon"><img src="{% static 'assets/img/icon/17.png' %}" alt=""></div>
+                        <h4>{% trans "Custom Web Applications" %}</h4>
+                        <p>{% trans "Tailor-made Django platforms for booking, quoting, invoicing, or managing your business — fast, secure, and scalable." %}</p>
+                    </div>
+                </div>
+                <div class="feature-style-three hover-active-item active">
+                    <div class="item">
+                        <div class="icon"><img src="{% static 'assets/img/icon/18.png' %}" alt=""></div>
+                        <h4>{% trans "Automation & Integrations" %}</h4>
+                        <p>{% trans "Connect Stripe, Google APIs, or Twilio SMS to automate daily operations and eliminate manual work." %}</p>
+                    </div>
+                </div>
+                <div class="feature-style-three hover-active-item">
+                    <div class="item">
+                        <div class="icon"><img src="{% static 'assets/img/icon/20.png' %}" alt=""></div>
+                        <h4>{% trans "Data Dashboards" %}</h4>
+                        <p>{% trans "Visualize and monitor key metrics in real-time using Chart.js, Looker Studio, or custom Django dashboards." %}</p>
+                    </div>
+                </div>
+                <div class="feature-style-three hover-active-item">
+                    <div class="item">
+                        <div class="icon"><img src="{% static 'assets/img/icon/19.png' %}" alt=""></div>
+                        <h4>{% trans "Maintenance & Hosting" %}</h4>
+                        <p>{% trans "We handle hosting, backups, updates, and security — keeping your systems reliable and up to date." %}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Our Features -->
 
-    
-
-   <!-- Start About 
-    ============================================= -->
+    <!-- About -->
     <div id="about" class="about-style-four-area default-padding">
         <div class="container">
             <div class="left-heading">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h4 class="sub-title">{% trans "About Company" %}</h4>
-                        <h2 class="title">{% trans "Digital tools to simplify and grow your business" %}</h2>
+                        <h4 class="sub-title">{% trans "About smdata.dev" %}</h4>
+                        <h2 class="title">{% trans "Building digital systems that work for you" %}</h2>
                     </div>
                     <div class="col-lg-5 offset-lg-1">
-                        <p>{% trans "I help businesses and professionals by building web solutions that automate, simplify, and convert. Whether it’s a smart quote system, AI chatbot, or real-time analytics dashboard, I turn your processes into efficient, user-friendly digital tools." %}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="about-style-four-thumb">
-                        <img src="{% static 'assets/img/about/9.jpg' %}" alt="Image Not Found">
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="about-style-four-info">
-                        <div class="about-list-box">
-                            <ul class="about-four-list">
-                                <li>
-                                    <div class="icon">
-                                        <img src="{% static 'assets/img/icon/21.png' %}" alt="Image Not Found">
-                                    </div>
-                                    <h4>{% trans "High Quality Work" %}</h4>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <img src="{% static 'assets/img/icon/22.png' %}" alt="Image Not Found">
-                                    </div>
-                                    <h4>{% trans "All Clients Satisfaction" %}</h4>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <img src="{% static 'assets/img/icon/23.png' %}" alt="Image Not Found">
-                                    </div>
-                                    <h4>{% trans "Money Back Guarantee" %}</h4>
-                                </li>
-                        </ul>
-                        </div>
-                        <div class="thumb">
-                            <img src="{% static 'assets/img/about/10.jpg' %}" alt="Image Not Found">
-                            
-                        </div>
+                        <p>{% trans "We combine web development, database expertise, and automation to create tools that simplify your operations and grow your business. Each solution is fully customized — designed around your goals, not templates." %}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End About -->
 
-    <!-- Start Process Area  
-    ============================================= -->
+    <!-- Process -->
     <div id="process" class="process-style-two-area default-padding bottom-less bg-dark text-light">
-        <div class="shape">
-            <img src="assets/img/shape/46.png" alt="Image Not Found">
-        </div>
         <div class="container">
             <div class="left-heading">
                 <div class="row">
                     <div class="col-lg-4">
                         <h4 class="sub-title">{% trans "Work Process" %}</h4>
-                        <h2 class="title">{% trans "How we’ll work together" %}</h2>
+                        <h2 class="title">{% trans "How We Work Together" %}</h2>
                     </div>
                     <div class="col-lg-6 offset-lg-2">
-                        <p>{% trans "I work with entrepreneurs and growing businesses to deliver smart digital solutions — from AI-powered chatbots to personalized Django platforms and business dashboards. Every project begins with your goals and ends with a tailored system that works, automates, and scales." %}</p>                        
+                        <p>{% trans "Every collaboration starts with your idea and ends with a custom, ready-to-use system. Simple process, powerful results." %}</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
+
             <div class="row">
-                <!-- Single Item -->
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="process-style-two">
                         <span>01</span>
-                        <h4>{% trans "Pick your service" %}</h4>
-                        <p>{% trans "Choose from ready-made services or request a custom web/automation solution." %}</p>
-                        <div class="icon">
-                            <img src="assets/img/icon/24.png" alt="Image Not Found">
-                        </div>
+                        <h4>{% trans "Discovery & Planning" %}</h4>
+                        <p>{% trans "We analyze your goals, map your data, and design the perfect structure for your system." %}</p>
                     </div>
                 </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="process-style-two">
                         <span>02</span>
-                        <h4>{% trans "Analysis & Planning" %}</h4>
-                        <p>{% trans "I review your needs and design the best system using Django, AI, and automation tools." %}</p>
-                        <div class="icon">
-                            <img src="assets/img/icon/25.png" alt="Image Not Found">
-                        </div>
+                        <h4>{% trans "Development & Integration" %}</h4>
+                        <p>{% trans "Using Django, Python, and automation tools, we build, connect, and test your platform." %}</p>
                     </div>
                 </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="process-style-two">
                         <span>03</span>
                         <h4>{% trans "Launch & Support" %}</h4>
-                        <p>{% trans "You get a professional, secure solution, with ongoing support and subscription-based upgrades." %}</p>
-                        <div class="icon">
-                            <img src="assets/img/icon/26.png" alt="Image Not Found">
-                        </div>
+                        <p>{% trans "We deploy your system with full documentation, training, and optional ongoing maintenance." %}</p>
                     </div>
                 </div>
-                <!-- End Single Item -->
             </div>
         </div>
     </div>
-    <!-- End Process Area -->
 
-
-
-    
-
-
-    <!-- Start Blog 
-    ============================================= -->
-    <div id="blog" class="home-blog-area default-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h4 class="sub-title">{% trans "Latest Blog" %}</h4>
-                        <h2 class="title split-text">{% trans "News & Update" %}</h2>
-                        <div class="devider"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <!-- Single Item -->
-                <div class="col-lg-6">
-                    <div class="blog-style-one solid wow fadeInUp">
-                        <div class="thumb">
-                            <img src="{% static 'assets/img/blog/1.jpg' %}" alt="Image Not Found">
-                            <div class="tags"><a href="#">{% trans "Finance" %}</a></div>
-                            <div class="info">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fas fa-user"></i> {% trans "Md Sohag" %}</a>
-                                        </li>
-                                        <li>
-                                            24 August, 2025
-                                        </li>
-                                    </ul>
-                                 </div>
-                                <h4>
-                                    <a href="blog-single-with-sidebar.html">{% trans "Considered imprudence of he friendship many variations boisterous." %}</a>
-                                </h4>
-                                <p>{% trans "Easy mind life fact with see has bore ten. Parish any chatty can elinor direct for former. Up as meant widow equal." %}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="col-lg-6 mt-md-30 mt-xs-30">
-                    <div class="blog-style-one solid mb-30 wow fadeInUp" data-wow-delay="150ms">
-                        <div class="thumb">
-                            <img src="{% static 'assets/img/blog/2.jpg' %}" alt="Image Not Found">
-                            <div class="tags"><a href="#">{% trans "Success" %}</a></div>
-                            <div class="info">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fas fa-user"></i> {% trans "Md Sohag" %}</a>
-                                        </li>
-                                        <li>
-                                            16 August, 2025
-                                        </li>
-                                    </ul>
-                                 </div>
-                                <h4>
-                                    <a href="blog-single-with-sidebar.html">{% trans "Perceived determine departure explained no forfeited he something an." %}</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-style-one solid wow fadeInUp" data-wow-delay="200ms">
-                        <div class="thumb">
-                            <img src="{% static 'assets/img/blog/3.jpg' %}" alt="Image Not Found">
-                            <div class="tags"><a href="#">{% trans "Analysis" %}</a></div>
-                            <div class="info">
-                                <div class="blog-meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fas fa-user"></i> {% trans "Md Sohag" %}</a>
-                                        </li>
-                                        <li>
-                                            18 August, 2025
-                                        </li>
-                                    </ul>
-                                 </div>
-                                <h4>
-                                    <a href="blog-single-with-sidebar.html">{% trans "Discovery incommode earnestly commanded if." %}</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-            </div>
-        </div>
-    </div>
-    <!-- End Blog  -->
-
-    <!-- Start Contact Us 
-    ============================================= -->
+    <!-- Contact -->
     <div id="contact" class="contact-style-one-area overflow-hidden half-shape-top default-padding-bottom">
-
-        <div class="contact-shape">
-            <img src="{% static 'assets/img/shape/37.png' %}" alt="Image Not Found">
-        </div>
-       
         <div class="container">
             <div class="row">
-
                 <div class="contact-stye-one col-lg-5 pt-220 pt-md-120 pt-xs-50">
-
-                    <div class="shape-animated-arrow">
-                        <img src="{% static 'assets/img/shape/36.png' %}" alt="Image Not Found">
-                    </div>
-
                     <div class="contact-style-one-info">
-                        <h2 class="split-text">{% trans "Contact Information" %}</h2>
-                        <p class="wow fadeInUp" data-wow-delay="100ms">
-                            {% trans "Tell me about your business — and I’ll create something that saves you time, boosts conversions, or both." %}</p>
+                        <h2 class="split-text">{% trans "Let’s Build Something Smart" %}</h2>
+                        <p>{% trans "Tell us about your project, challenge, or idea — and we’ll show you how technology can make it faster, simpler, and more efficient." %}</p>
                         <ul>
-                            <li class="wow fadeInUp">
-                                <div class="icon">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div class="content">
-                                    <h5 class="title">{% trans "Hotline" %}</h5>
-                                    <a href="">+4733378901</a>
-                                </div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-delay="300ms">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="info">
-                                    <h5 class="title">{% trans "Our Location" %}</h5>
-                                    <p>{% trans "55 Main Street, The Grand Avenue 2nd Block, <br> New York City" %}</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-delay="500ms">
-                                <div class="icon">
-                                    <i class="fas fa-envelope-open-text"></i>
-                                </div>
-                                <div class="info">
-                                    <h5 class="title">{% trans "Official Email" %}</h5>
-                                    <a href="mailto:info@agrul.com.com">info@agrul.com</a>
-                                </div>
-                            </li>
+                            <li><div class="icon"><i class="fas fa-envelope-open-text"></i></div>
+                                <div class="info"><h5 class="title">{% trans "Email" %}</h5><a href="mailto:info@smdata.dev">info@smdata.dev</a></div></li>
+                            <li><div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="info"><h5 class="title">{% trans "Location" %}</h5><p>Romania • Remote Worldwide</p></div></li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="contact-stye-one col-lg-7 pl-60 pl-md-15 pl-xs-15 mt-md-50">
                     <div class="contact-form-style-one wow fadeInLeft" data-wow-delay="150ms">
-                        <h5 class="sub-title">{% trans "Have Questions?" %}</h5>
-                        <h2 class="title">{% trans "Send us a Massage" %}</h2>
-                        <form action="{% static 'assets/mail/contact.php' %}" method="POST" class="contact-form contact-form">
+                        <h5 class="sub-title">{% trans "Get in Touch" %}</h5>
+                        <h2 class="title">{% trans "Request a Free Consultation" %}</h2>
+                        <form id="contactForm" action="{% url 'contact_form' %}" method="POST" class="contact-form">
+                            {% csrf_token %}
+                            <div id="message" style="display: none; margin-bottom: 20px; padding: 10px; border-radius: 5px;"></div>
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input class="form-control" id="name" name="name" placeholder="{% trans "Name" %}" type="text">
-                                        <span class="alert-error"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="email" name="email" placeholder="Email*" type="email">
-                                        <span class="alert-error"></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="phone" name="phone" placeholder="{% trans "Phone" %}" type="text">
-                                        <span class="alert-error"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group comments">
-                                        <textarea class="form-control" id="comments" name="comments" placeholder="{% trans "Tell Us About Project" %} *"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
+                                <div class="col-lg-12"><div class="form-group">
+                                    <input class="form-control" id="name" name="name" placeholder="{% trans 'Name' %}" type="text" required>
+                                </div></div>
+                                <div class="col-lg-6"><div class="form-group">
+                                    <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
+                                </div></div>
+                                <div class="col-lg-6"><div class="form-group">
+                                    <input class="form-control" id="phone" name="phone" placeholder="{% trans 'Phone' %}" type="text">
+                                </div></div>
+                                <div class="col-lg-12"><div class="form-group comments">
+                                    <textarea class="form-control" id="comments" name="comments" placeholder="{% trans 'Tell us about your project' %} *" required></textarea>
+                                </div></div>
                                 <div class="col-lg-12">
                                     <button type="submit" name="submit" id="submit">
-                                        <i class="fa fa-paper-plane"></i> {% trans "Get in Touch" %}
+                                        <i class="fa fa-paper-plane"></i> {% trans "Send Message" %}
                                     </button>
                                 </div>
-                            </div>
-                            <!-- Alert Message -->
-                            <div class="col-lg-12 alert-notification">
-                                <div id="message" class="alert-msg"></div>
                             </div>
                         </form>
                     </div>
                 </div>
 
-                
-
             </div>
         </div>
     </div>
-    <!-- End Contact -->
 
-    <!-- Start Footer 
-    ============================================= -->
+    <!-- Footer -->
     <footer class="bg-dark footer-style-two text-light bg-cover" style="background-image: url({% static 'assets/img/shape/banner-8.jpg' %});">
         <div class="container">
             <div class="f-items relative pt-70 pb-120 pt-xs-0 pb-xs-50">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 footer-item pr-50 pr-xs-15">
                         <div class="f-item about">
-<<<<<<< HEAD
                             <img class="logo" src="{% static 'assets/img/logo3.png' %}" alt="Logo">
-=======
-                            <img class="logo" src="{% static 'assets/img/logo-light-solid.png' %}" alt="Logo">
->>>>>>> 1e0d4f9 (Initial commit)
-                            <p>{% trans "SM Data helps small and mid-sized businesses automate their digital workflow through Django web development, AI chatbot integration, and business dashboards." %}</p>
+                            <p>{% trans "smdata.dev helps businesses automate workflows and make data-driven decisions through Django web development, integrations, and smart analytics." %}</p>
                             <ul class="footer-social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fab fa-youtube"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                </li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-github"></i></a></li>
                             </ul>
                         </div>
                     </div>
+
                     <div class="col-lg-2 col-md-6 footer-item">
                         <div class="f-item link">
-                            <h4 class="widget-title">{% trans "Our Company" %}</h4>
+                            <h4 class="widget-title">{% trans "Quick Links" %}</h4>
                             <ul>
-                                <li>
-                                    <a href="about-us.html">{% trans "Compnay Profile" %}</a>
-                                </li>
-                                <li>
-                                    <a href="faq.html">{% trans "Help Center" %}</a>
-                                </li>
-                                <li>
-                                    <a href="about-us.html">{% trans "Career" %}</a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">{% trans "Plans & Pricing" %}</a>
-                                </li>
-                                <li>
-                                    <a href="contact-us.html">{% trans "Contact" %}</a>
-                                </li>
+                                <li><a href="#home">{% trans "Home" %}</a></li>
+                                <li><a href="#services">{% trans "Services" %}</a></li>
+                                <li><a href="#about">{% trans "About" %}</a></li>
+                                <li><a href="#process">{% trans "Process" %}</a></li>
+                                <li><a href="#contact">{% trans "Contact" %}</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-6 footer-item">
-                        <div class="f-item link">
-                            <h4 class="widget-title">{% trans "Our Services" %}</h4>
-                            <ul>
-                                <li>
-                                    <a href="services-details.html">{% trans "Custom Websites" %}</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html">{% trans "AI Chatbots" %}</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html">{% trans "Data Processing" %}</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html">{% trans "AI Automations" %}</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html">{% trans "IT Consulting" %}</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 footer-item">
+
+                    <div class="col-lg-6 col-md-6 footer-item">
                         <div class="f-item contact">
-                            <h4 class="widget-title">{% trans "Get in touch" %}</h4>
+                            <h4 class="widget-title">{% trans "Contact" %}</h4>
                             <ul>
-                                <li>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <p>1791 Yorkshire Circle Kitty Hawk, NC 27949, Old New York City</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-phone-alt"></i>
-                                    <p>+012-345-6789 <br> +012-345-6789</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-envelope"></i>
-                                    <p>
-                                        jony@gmail.com <br> info@example.com
-                                    </p>
-                                </li>
+                                <li><i class="fas fa-envelope"></i><p>info@smdata.dev</p></li>
+                                <li><i class="fas fa-map-marker-alt"></i><p>Romania • Remote Projects Worldwide</p></li>
                             </ul>
                         </div>
                     </div>
@@ -725,59 +370,113 @@
             </div>
         </div>
 
-        <!-- Start Footer Bottom -->
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <p>{% trans "&copy; Copyright 2025. All Rights Reserved by" %} <a href="#">validthemes</a></p>
+                        <p>© 2025 smdata.dev. All rights reserved.</p>
                     </div>
                     <div class="col-lg-6 text-end">
                         <ul>
-                            <li>
-                                <a href="about-us.html">{% trans "Terms" %}</a>
-                            </li>
-                            <li>
-                                <a href="about-us.html">{% trans "Privacy" %}</a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html">{% trans "Support" %}</a>
-                            </li>
+                            <li><a href="#">{% trans "Privacy Policy" %}</a></li>
+                            <li><a href="#">{% trans "Terms of Service" %}</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Footer Bottom -->
-
     </footer>
-    <!-- End Footer -->
-<<<<<<< HEAD
 
-    <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cmbte10db013yn8lx6cysudf4"></script>
-=======
->>>>>>> 1e0d4f9 (Initial commit)
+    <!-- <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cmbte10db013yn8lx6cysudf4"></script> -->
     
     <!-- jQuery Frameworks
     ============================================= -->
     <script src="{% static 'assets/js/jquery-3.7.1.min.js' %}"></script>
     <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.appear.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
-    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
-    <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
-    <script src="{% static 'assets/js/wow.min.js' %}"></script>
-    <script src="{% static 'assets/js/progress-bar.min.js' %}"></script>
-    <script src="{% static 'assets/js/circle-progress.js' %}"></script>
-    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
-    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
-    <script src="{% static 'assets/js/count-to.js' %}"></script>
-    <script src="{% static 'assets/js/YTPlayer.min.js' %}"></script>
-    <script src="{% static 'assets/js/validnavs.js' %}"></script>
-    <script src="{% static 'assets/js/gsap.js' %}"></script>
-    <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
-    <script src="{% static 'assets/js/SplitText.min.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
+    
+    <script>
+        // Handle service dropdown selection
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownItems = document.querySelectorAll('.dropdown-item[data-service]');
+            const commentsField = document.getElementById('comments');
+            
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    const service = this.getAttribute('data-service');
+                    const serviceText = this.textContent.trim();
+                    
+                    // Pre-fill the comments field with the selected service
+                    if (commentsField) {
+                        commentsField.value = `I'm interested in: ${serviceText}`;
+                    }
+                    
+                    // Scroll to contact form
+                    setTimeout(() => {
+                        document.getElementById('contact').scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 100);
+                });
+            });
 
+            // Handle contact form submission
+            const contactForm = document.getElementById('contactForm');
+            const messageDiv = document.getElementById('message');
+            const submitButton = document.getElementById('submit');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Show loading state
+                    submitButton.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending...';
+                    submitButton.disabled = true;
+                    
+                    // Hide previous messages
+                    messageDiv.style.display = 'none';
+                    
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    
+                    // Send AJAX request
+                    fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Show message
+                        messageDiv.style.display = 'block';
+                        if (data.success) {
+                            messageDiv.className = 'alert alert-success';
+                            messageDiv.textContent = data.message;
+                            contactForm.reset(); // Clear form on success
+                        } else {
+                            messageDiv.className = 'alert alert-danger';
+                            messageDiv.textContent = data.message;
+                        }
+                        
+                        // Scroll to message
+                        messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    })
+                    .catch(error => {
+                        messageDiv.style.display = 'block';
+                        messageDiv.className = 'alert alert-danger';
+                        messageDiv.textContent = 'Sorry, there was an error sending your message. Please try again.';
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        submitButton.innerHTML = '<i class="fa fa-paper-plane"></i> Send Message';
+                        submitButton.disabled = false;
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
