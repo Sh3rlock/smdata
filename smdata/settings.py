@@ -204,17 +204,20 @@ if IS_PRODUCTION and EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
         EMAIL_USE_SSL = False
         print(f"✅ Email configured: SendGrid SMTP")
     else:
-        # Standard SMTP configuration
+        # Standard SMTP configuration - DEFAULTING TO SENDGRID COMPATIBLE
         EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
         
-        # SMTP configuration - try port 80 first (commonly allowed)
-        EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtpout.secureserver.net')
-        EMAIL_PORT = int(os.environ.get('EMAIL_PORT', '80'))
+        # Use SendGrid as default since Railway blocks other SMTP
+        EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.sendgrid.net')
+        EMAIL_PORT = int(os.environ.get('EMAIL_PORT', '587'))
         
         # Configure TLS/SSL based on port
-        if EMAIL_PORT == 587 or EMAIL_PORT == 465:
-            EMAIL_USE_TLS = (EMAIL_PORT == 587)
-            EMAIL_USE_SSL = (EMAIL_PORT == 465)
+        if EMAIL_PORT == 587:
+            EMAIL_USE_TLS = True
+            EMAIL_USE_SSL = False
+        elif EMAIL_PORT == 465:
+            EMAIL_USE_TLS = False
+            EMAIL_USE_SSL = True
         else:
             EMAIL_USE_TLS = False
             EMAIL_USE_SSL = False
@@ -226,11 +229,14 @@ if IS_PRODUCTION and EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
     # Set email timeout to prevent hanging
     EMAIL_TIMEOUT = 10
     print(f"   Timeout: {EMAIL_TIMEOUT}s")
+    print(f"📝 Note: All contact form submissions are also saved to the database as backup")
 else:
     # Development or production without credentials - use console backend
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     if IS_PRODUCTION:
         print("⚠️  Email configured: Console backend (no SMTP credentials found)")
         print(f"   Set EMAIL_HOST_USER and EMAIL_HOST_PASSWORD environment variables to enable email delivery")
+        print(f"📝 All submissions are saved to database - check Django admin for messages")
     else:
         print("ℹ️  Email configured: Console backend (development mode)")
+        print(f"📝 All submissions are saved to database - check Django admin for messages")
