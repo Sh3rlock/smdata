@@ -189,22 +189,36 @@ DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'info@smdata.dev')
 # Get email credentials from environment variables
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY', '')
+SENDGRID_EU_RESIDENCY = os.environ.get('SENDGRID_EU_RESIDENCY', 'false').lower() == 'true'
 
 # Check if we're in production (DEBUG=False or on a hosting platform)
 IS_PRODUCTION = not DEBUG or os.environ.get('DYNO') or os.environ.get('RAILWAY_ENVIRONMENT')
 
 # Configure email backend based on environment and credentials
-if IS_PRODUCTION and EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
-    # Check if using SendGrid (email user is 'apikey')
+if IS_PRODUCTION and SENDGRID_API_KEY:
+    # Use SendGrid API backend with EU data residency support
+    EMAIL_BACKEND = 'smdataapp.backends.SendGridEUEmailBackend'
+    # Store API key - backend will read from EMAIL_HOST_PASSWORD
+    EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+    
+    if SENDGRID_EU_RESIDENCY:
+        print(f"✅ Email configured: SendGrid API with EU data residency enabled")
+        print(f"   Note: EU subuser must be configured in SendGrid account")
+    else:
+        print(f"✅ Email configured: SendGrid API")
+        
+elif IS_PRODUCTION and EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
+    # Fallback to SMTP if API key not provided
     if EMAIL_HOST_USER == 'apikey':
         EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
         EMAIL_HOST = 'smtp.sendgrid.net'
         EMAIL_PORT = 587
         EMAIL_USE_TLS = True
         EMAIL_USE_SSL = False
-        print(f"✅ Email configured: SendGrid SMTP")
+        print(f"✅ Email configured: SendGrid SMTP (API key preferred for EU residency)")
     else:
-        # Standard SMTP configuration - DEFAULTING TO SENDGRID COMPATIBLE
+        # Standard SMTP configuration
         EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
         
         # Use SendGrid as default since Railway blocks other SMTP
@@ -234,8 +248,9 @@ else:
     # Development or production without credentials - use console backend
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     if IS_PRODUCTION:
-        print("⚠️  Email configured: Console backend (no SMTP credentials found)")
-        print(f"   Set EMAIL_HOST_USER and EMAIL_HOST_PASSWORD environment variables to enable email delivery")
+        print("⚠️  Email configured: Console backend (no credentials found)")
+        print(f"   Set SENDGRID_API_KEY environment variable to enable SendGrid API")
+        print(f"   Or set EMAIL_HOST_USER and EMAIL_HOST_PASSWORD for SMTP")
         print(f"📝 All submissions are saved to database - check Django admin for messages")
     else:
         print("ℹ️  Email configured: Console backend (development mode)")
