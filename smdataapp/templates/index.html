@@ -93,6 +93,385 @@
 </head>
 
 <style>
+/* Sticky Navigation - Only after scrolling */
+header {
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+header.scrolled {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #fff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    transition: all 0.3s ease;
+}
+
+header.scrolled nav {
+    background: #fff !important;
+}
+
+/* Mobile Navigation Styles */
+.navbar-toggle {
+    border: none;
+    background: transparent;
+    padding: 5px 15px;
+    margin: 0;
+    float: right;
+}
+
+.navbar-toggle i {
+    font-size: 24px;
+    color: #232323;
+}
+
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+    background: transparent !important;
+}
+
+.navbar-toggle .fa-times {
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    header {
+        position: relative !important;
+    }
+    
+    header.scrolled {
+        position: fixed !important;
+        background: #fff !important;
+    }
+    
+    /* Override theme positioning that causes centering issues */
+    .navbar-header,
+    .navbar-brand,
+    .navbar-mobile-email,
+    .navbar-toggle {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+    }
+    
+    .container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0 15px !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .navbar-header {
+        flex: 0 0 auto !important;
+        min-width: 0 !important;
+        order: 1 !important;
+        margin-right: 5px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .navbar-brand {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        line-height: 1 !important;
+        width: auto !important;
+    }
+    
+    .navbar-brand img {
+        height: 50px !important;
+        width: auto !important;
+        max-width: none !important;
+        display: block !important;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+    }
+    
+    .navbar-mobile-email {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 10px !important;
+        overflow: hidden !important;
+        order: 2 !important;
+    }
+    
+    .navbar-mobile-email .call {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+    
+    .navbar-mobile-email .call .icon {
+        flex: 0 0 auto !important;
+        font-size: 24px !important;
+        color: #0d6efd !important;
+    }
+    
+    .navbar-mobile-email .call .info {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+    }
+    
+    .navbar-mobile-email .call .info p {
+        font-size: 11px !important;
+        color: #6c757d !important;
+        margin: 0 !important;
+        line-height: 1.2 !important;
+    }
+    
+    .navbar-mobile-email .call .info h5 {
+        margin: 0 !important;
+        line-height: 1.2 !important;
+    }
+    
+    .navbar-mobile-email .call .info h5 a {
+        color: #232323 !important;
+        text-decoration: none !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: block !important;
+        text-transform: lowercase !important;
+    }
+    
+    .navbar-toggle {
+        display: block !important;
+        margin: 0 !important;
+        padding: 5px 10px !important;
+        background: transparent !important;
+        border: none !important;
+        flex: 0 0 auto !important;
+        flex-shrink: 0 !important;
+        order: 3 !important;
+    }
+    
+    .collapse-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 15px 20px !important;
+        background: #fff !important;
+    }
+    
+    .collapse-header img {
+        max-height: 40px !important;
+        order: 1 !important;
+    }
+    
+    .collapse-header .navbar-toggle {
+        background: transparent !important;
+        border: none !important;
+        padding: 8px 12px !important;
+        color: #232323 !important;
+        font-size: 28px !important;
+        cursor: pointer !important;
+        order: 2 !important;
+        margin-left: auto !important;
+        line-height: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    .collapse-header .navbar-toggle:hover {
+        opacity: 0.7 !important;
+        transform: scale(1.1) !important;
+    }
+    
+    .collapse-header .navbar-toggle i {
+        color: #232323 !important;
+    }
+    
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100vh;
+        background: #fff;
+        z-index: 99999;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+    
+    .navbar-collapse.in {
+        left: 0;
+    }
+    
+    .overlay-screen {
+        display: none;
+    }
+    
+    .navbar-collapse.in ~ .overlay-screen {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99998;
+    }
+    
+    .navbar-nav {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .navbar-nav li {
+        width: 100%;
+    }
+    
+    .navbar-nav li a {
+        padding: 15px 20px !important;
+        display: block;
+        color: #232323 !important;
+        font-weight: 500;
+    }
+    
+    .navbar-nav li a:hover {
+        background: #f5f5f5;
+        color: #0d6efd !important;
+    }
+    
+    .navbar-nav .language-form {
+        padding: 20px;
+    }
+    
+    /* Email section at bottom of mobile menu */
+    .mobile-menu-email {
+        padding: 20px;
+        border-top: 1px solid #e0e0e0;
+        margin-top: 0px !important;
+    }
+    
+    .mobile-menu-email .call {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .mobile-menu-email .call .icon {
+        flex: 0 0 auto;
+        font-size: 32px;
+        color: #0d6efd;
+        margin-top: 2px;
+    }
+    
+    .mobile-menu-email .call .info {
+        flex: 1 1 auto;
+    }
+    
+    .mobile-menu-email .call .info p {
+        font-size: 13px;
+        color: #6c757d;
+        margin: 0;
+        line-height: 1.4;
+    }
+    
+    .mobile-menu-email .call .info h5 {
+        margin: 5px 0 0 0;
+        line-height: 1.4;
+    }
+    
+    .mobile-menu-email .call .info h5 a {
+        color: #232323;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: lowercase;
+    }
+    
+    .mobile-menu-email .call .info h5 a:hover {
+        color: #0d6efd;
+    }
+    
+    .attr-right {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        gap: 10px;
+    }
+    
+    .navbar-mobile-email {
+        padding: 0 5px;
+    }
+    
+    .navbar-mobile-email .call {
+        gap: 8px !important;
+    }
+    
+    .navbar-mobile-email .call .icon {
+        font-size: 20px !important;
+    }
+    
+    .navbar-mobile-email .call .info p {
+        font-size: 9px !important;
+    }
+    
+    .navbar-mobile-email .call .info h5 a {
+        font-size: 14px !important;
+        text-transform: lowercase !important;
+    }
+    
+    .navbar-brand img {
+        height: 40px !important;
+    }
+    
+    .navbar-toggle {
+        padding: 5px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-toggle {
+        display: none !important;
+    }
+    
+    .collapse-header {
+        display: none !important;
+    }
+    
+    .navbar-mobile-email {
+        display: none !important;
+    }
+    
+    .mobile-menu-email {
+        display: none !important;
+    }
+    
+    /* Hide mobile contact sections but keep desktop attr-right visible */
+    .attr-right {
+        display: block !important;
+    }
+}
+
 .language_selector {
     font-family: var(--font-default);
     font-size: 19px;
@@ -269,15 +648,26 @@ div[id*="chatbot-widget"] {
         <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed dark no-background">
             <div class="container d-flex justify-content-between align-items-center">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
                     <a class="navbar-brand" href="#home">
                         <img src="{% static 'assets/img/logo5.png' %}" class="logo" alt="Logo">
                     </a>
                 </div>
 
+                <div class="navbar-mobile-email">
+                    <div class="call">
+                        <div class="icon"><i class="fas fa-comments-alt-dollar"></i></div>
+                        <div class="info">
+                            <p>{% trans "Have any Questions?" %}</p>
+                            <h5><a href="mailto:info@smdata.dev">info@smdata.dev</a></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
+
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <div class="collapse-header">
-                        <img src="{% static 'assets/img/logo5.png' %}" alt="Logo">
+                        <img src="{% static 'assets/img/logo5.png' %}" style="margin-bottom:0px !important;" alt="Logo">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-times"></i></button>
                     </div>
 
@@ -301,6 +691,17 @@ div[id*="chatbot-widget"] {
                             </form>
                         </li>
                     </ul>
+                    
+                    <!-- Email section at bottom of mobile menu -->
+                    <div class="mobile-menu-email">
+                        <div class="call">
+                            <div class="icon"><i class="fas fa-comments-alt-dollar"></i></div>
+                            <div class="info">
+                                <p>{% trans "Have any Questions?" %}</p>
+                                <h5><a href="mailto:info@smdata.dev">info@smdata.dev</a></h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="attr-right">
@@ -590,6 +991,82 @@ div[id*="chatbot-widget"] {
     <script src="{% static 'assets/js/main.js' %}"></script>
     
     <script>
+        // Sticky Navigation on Scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            let lastScrollTop = 0;
+            
+            function handleScroll() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 100) { // Start becoming sticky after 100px of scroll
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScrollTop = scrollTop;
+            }
+            
+            window.addEventListener('scroll', handleScroll);
+            // Check initial position
+            handleScroll();
+        });
+        
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarToggle = document.querySelector('.navbar-toggle');
+            const navbarCollapse = document.querySelector('#navbar-menu');
+            const overlay = document.querySelector('.overlay-screen');
+            
+            function toggleMenu() {
+                if (navbarCollapse) {
+                    navbarCollapse.classList.toggle('in');
+                    if (overlay) {
+                        overlay.style.display = navbarCollapse.classList.contains('in') ? 'block' : 'none';
+                    }
+                }
+            }
+            
+            // Toggle menu on hamburger button click
+            if (navbarToggle) {
+                navbarToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    toggleMenu();
+                });
+            }
+            
+            // Close menu when clicking overlay
+            if (overlay) {
+                overlay.addEventListener('click', function() {
+                    navbarCollapse.classList.remove('in');
+                    overlay.style.display = 'none';
+                });
+            }
+            
+            // Close menu when clicking navigation links
+            const navLinks = document.querySelectorAll('#navbar-menu .navbar-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (navbarCollapse) {
+                        navbarCollapse.classList.remove('in');
+                        if (overlay) {
+                            overlay.style.display = 'none';
+                        }
+                    }
+                });
+            });
+            
+            // Handle collapse header close button
+            const collapseCloseBtn = document.querySelector('.collapse-header .navbar-toggle');
+            if (collapseCloseBtn) {
+                collapseCloseBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    toggleMenu();
+                });
+            }
+        });
+        
         // Handle service dropdown selection
         document.addEventListener('DOMContentLoaded', function() {
             const dropdownItems = document.querySelectorAll('.dropdown-item[data-service]');
