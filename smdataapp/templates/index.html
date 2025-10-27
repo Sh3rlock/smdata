@@ -71,6 +71,120 @@ div[id*="chatbot-widget"] {
     visibility: hidden !important;
     opacity: 0 !important;
 }
+
+/* Cookie Consent Banner Styles */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    z-index: 10000;
+    display: none;
+    animation: slideUp 0.3s ease-out;
+    border-top: 3px solid #0d6efd;
+}
+
+.cookie-consent.show {
+    display: block;
+}
+
+.cookie-consent-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cookie-consent-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.cookie-consent-text p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cookie-consent-text a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.cookie-consent-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cookie-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.cookie-btn-accept {
+    background: #0d6efd;
+    color: white;
+}
+
+.cookie-btn-accept:hover {
+    background: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.cookie-btn-decline {
+    background: #6c757d;
+    color: white;
+}
+
+.cookie-btn-decline:hover {
+    background: #5c636a;
+    transform: translateY(-1px);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .cookie-consent {
+        padding: 15px 20px;
+    }
+    
+    .cookie-consent-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cookie-consent-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .cookie-btn {
+        flex: 1;
+        min-width: 120px;
+    }
+}
 </style>
 
 <body>
@@ -150,12 +264,12 @@ div[id*="chatbot-widget"] {
                     <div class="container">
                         <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
                             <div class="col-xl-8 col-lg-10 text-center">
-                                <div class="content">
-                                    <h2>{% trans "Smart Web, Data & Automation Solutions" %}</h2>
-                                    <p>{% trans "smdata.dev builds modern Django web applications, data dashboards, and automations that save time and empower small businesses to scale efficiently." %}</p>
-                                    <div class="button">
+                                <div class="content" style="text-align: center; margin: 0 auto;">
+                                    <h2 style="text-align: center;">{% trans "Smart Solutions: Web, Data & Automation" %}</h2>
+                                    <p style="text-align: center !important; padding: 10px !important; margin: 0 auto; max-width: 100%; width: 100%;">{% trans "smdata.dev builds modern Django web applications, data dashboards, data processing and reporting, and automations that save time and empower small businesses to scale efficiently." %}</p>
+                                    <div class="button" style="display: flex; justify-content: center; margin-top: 20px;">
                                         <a href="#contact" class="btn btn-theme btn-md radius animation">
-                                            {% trans "Tell us about your needs" %}
+                                            {% trans "Get in touch" %}
                                         </a>
                                     </div>
                                     <div class="shape-circle"></div>
@@ -283,7 +397,7 @@ div[id*="chatbot-widget"] {
                 <div class="contact-stye-one col-lg-7 pl-60 pl-md-15 pl-xs-15 mt-md-50">
                     <div class="contact-form-style-one wow fadeInLeft" data-wow-delay="150ms">
                         <h5 class="sub-title">{% trans "Get in Touch" %}</h5>
-                        <h2 class="title">{% trans "Tell us about your needs" %}</h2>
+                        <h2 class="title">{% trans "Send Us a Message" %}</h2>
                         <form id="contactForm" action="{% url 'contact_form' %}" method="POST" class="contact-form">
                             {% csrf_token %}
                             <div id="message" style="display: none; margin-bottom: 20px; padding: 10px; border-radius: 5px;"></div>
@@ -376,13 +490,29 @@ div[id*="chatbot-widget"] {
                     <div class="col-lg-6 text-end">
                         <ul>
                             <li><a href="{% url 'privacy' %}">{% trans "Privacy Policy" %}</a></li>
-                            <li><a href="{% url 'terms' %}">{% trans "Terms of Service" %}</a></li>
+                            <li><a href="{% url 'terms' %}">{% trans "Terms and Conditions" %}</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+                <p>
+                    {% trans "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking 'Accept', you consent to our use of cookies." %} 
+                    <a href="{% url 'privacy' %}" target="_blank">{% trans "Learn more" %}</a>
+                </p>
+            </div>
+            <div class="cookie-consent-buttons">
+                <button class="cookie-btn cookie-btn-decline" id="cookieDecline">{% trans "Decline" %}</button>
+                <button class="cookie-btn cookie-btn-accept" id="cookieAccept">{% trans "Accept" %}</button>
+            </div>
+        </div>
+    </div>
 
     <!-- <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cmbte10db013yn8lx6cysudf4"></script> -->
     
@@ -473,6 +603,57 @@ div[id*="chatbot-widget"] {
                     });
                 });
             }
+
+            // Cookie Consent Handler
+            const cookieConsent = document.getElementById('cookieConsent');
+            const cookieAccept = document.getElementById('cookieAccept');
+            const cookieDecline = document.getElementById('cookieDecline');
+
+            // Check if user has already made a choice
+            function checkCookieConsent() {
+                const consent = localStorage.getItem('cookieConsent');
+                if (!consent) {
+                    // Show banner after a short delay for better UX
+                    setTimeout(() => {
+                        cookieConsent.classList.add('show');
+                    }, 1000);
+                }
+            }
+
+            // Function to hide banner
+            function hideCookieBanner() {
+                cookieConsent.classList.remove('show');
+                setTimeout(() => {
+                    cookieConsent.style.display = 'none';
+                }, 300);
+            }
+
+            // Handle Accept button
+            if (cookieAccept) {
+                cookieAccept.addEventListener('click', function() {
+                    localStorage.setItem('cookieConsent', 'accepted');
+                    hideCookieBanner();
+                    
+                    // Here you can enable analytics or other cookie-based features
+                    // For example:
+                    // gtag('consent', 'update', { 'analytics_storage': 'granted' });
+                });
+            }
+
+            // Handle Decline button
+            if (cookieDecline) {
+                cookieDecline.addEventListener('click', function() {
+                    localStorage.setItem('cookieConsent', 'declined');
+                    hideCookieBanner();
+                    
+                    // Ensure no cookies are set
+                    // For example:
+                    // gtag('consent', 'update', { 'analytics_storage': 'denied' });
+                });
+            }
+
+            // Check on page load
+            checkCookieConsent();
         });
     </script>
 </body>

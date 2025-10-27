@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-25 14:01+0000\n"
+"POT-Creation-Date: 2025-10-27 09:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: smdataapp/templates/index.html:104 smdataapp/templates/index.html:351
+#: smdataapp/templates/index.html:104 smdataapp/templates/index.html:348
 msgid "Home"
 msgstr "Kezdőlap"
 
-#: smdataapp/templates/index.html:105 smdataapp/templates/index.html:352
+#: smdataapp/templates/index.html:105 smdataapp/templates/index.html:349
 msgid "Services"
 msgstr "Szolgáltatások"
 
-#: smdataapp/templates/index.html:106 smdataapp/templates/index.html:353
+#: smdataapp/templates/index.html:106 smdataapp/templates/index.html:350
 msgid "About"
 msgstr "Rólam"
 
-#: smdataapp/templates/index.html:107 smdataapp/templates/index.html:354
+#: smdataapp/templates/index.html:107 smdataapp/templates/index.html:351
 msgid "Process"
 msgstr "Folyamat"
 
-#: smdataapp/templates/index.html:108 smdataapp/templates/index.html:355
-#: smdataapp/templates/index.html:362
+#: smdataapp/templates/index.html:108 smdataapp/templates/index.html:352
+#: smdataapp/templates/index.html:359
 msgid "Contact"
 msgstr "Kapcsolat"
 
@@ -44,168 +44,213 @@ msgid "Have any Questions?"
 msgstr "Van kérdése?"
 
 #: smdataapp/templates/index.html:154
-msgid "Smart Web, Data & Automation Solutions"
-msgstr "Okos web, adat- és automatizálási megoldások"
+msgid "Smart Solutions: Web, Data & Automation"
+msgstr "Okos megoldások: web, adat és automatizálás"
 
 #: smdataapp/templates/index.html:155
 msgid ""
-"smdata.dev builds modern Django web applications, data dashboards, and "
-"automations that save time and empower small businesses to scale efficiently."
-msgstr "automatizálások, amelyek időt takarítanak meg és lehetővé teszik a kisvállalkozások számára a hatékony skálázást."
+"smdata.dev builds modern Django web applications, data dashboards, data "
+"processing and reporting, and automations that save time and empower small "
+"businesses to scale efficiently."
+msgstr ""
+"smdata.dev modern Django webalkalmazásokat, adatirányítópultokat, "
+"adatfeldolgozást és jelentéskészítést, valamint automatikus megoldásokat "
+"készít, amelyek időt takarítanak meg és lehetővé teszik a kisvállalkozások "
+"számára a hatékony skálázást."
 
-#: smdataapp/templates/index.html:158 smdataapp/templates/index.html:289
-msgid "Tell us about your needs"
-msgstr "Mondd el szükségleteidet"
+#: smdataapp/templates/index.html:158
+msgid "Get in touch"
+msgstr "Lépjen velünk kapcsolatba"
 
-#: smdataapp/templates/index.html:182
+#: smdataapp/templates/index.html:179
 msgid "Custom Web Applications"
 msgstr "Egyedi webalkalmazások"
 
-#: smdataapp/templates/index.html:183
+#: smdataapp/templates/index.html:180
 msgid ""
 "Tailor-made Django platforms for booking, quoting, invoicing, or managing "
 "your business — fast, secure, and scalable."
-msgstr "Szabványméretű Django platformok foglaláshoz, árajánlathoz, számlázáshoz vagy vállalkozásod kezeléséhez — gyors, biztonságos és skálázható."
+msgstr ""
+"Szabványméretű Django platformok foglaláshoz, árajánlathoz, számlázáshoz "
+"vagy vállalkozásod kezeléséhez — gyors, biztonságos és skálázható."
 
-#: smdataapp/templates/index.html:189
-msgid "Automation & Integrations"
-msgstr "Automatizálás és integrációk"
-
-#: smdataapp/templates/index.html:190
-msgid ""
-"Connect Stripe, Google APIs, or custom integrations to automate daily "
-"operations and eliminate manual work."
-msgstr "Csatlakoztass Stripe-t, Google API-kat vagy egyedi integrációkat a napi műveletek automatizálásához és a manuális munka kiküszöböléséhez."
-
-#: smdataapp/templates/index.html:196
-#, fuzzy
-#| msgid "Data Processing"
+#: smdataapp/templates/index.html:186
 msgid "Data Processing & Reporting"
 msgstr "Adatfeldolgozás és jelentéskészítés"
 
-#: smdataapp/templates/index.html:197
+#: smdataapp/templates/index.html:187
 msgid ""
 "Process, analyze, and visualize data with automated reporting, real-time "
 "dashboards using tools like Looker Studio, or custom solutions."
 msgstr ""
+"Feldolgozás, elemzés és vizualizáció automatizált jelentéskészítéssel, valós "
+"idejű irányítópultokkal, Looker Studio vagy egyedi megoldások használatával."
 
-#: smdataapp/templates/index.html:203
+#: smdataapp/templates/index.html:193
+msgid "Automation & Integrations"
+msgstr "Automatizálás és integrációk"
+
+#: smdataapp/templates/index.html:194
+msgid ""
+"Connect Stripe, Google APIs, or custom integrations to automate daily "
+"operations and eliminate manual work."
+msgstr ""
+"Csatlakoztass Stripe-t, Google API-kat vagy egyedi integrációkat a napi "
+"műveletek automatizálásához és a manuális munka kiküszöböléséhez."
+
+#: smdataapp/templates/index.html:200
 msgid "Maintenance & Hosting"
 msgstr "Karbantartás és hosting"
 
-#: smdataapp/templates/index.html:204
+#: smdataapp/templates/index.html:201
 msgid ""
 "We handle hosting, backups, updates, and security — keeping your systems "
 "reliable and up to date."
-msgstr "Mi kezeljük a hostingot, biztonsági mentéseket, frissítéseket és biztonságot — hogy rendszereid megbízhatóak és naprakészek maradjanak."
+msgstr ""
+"Mi kezeljük a hostingot, biztonsági mentéseket, frissítéseket és biztonságot "
+"— hogy rendszereid megbízhatóak és naprakészek maradjanak."
 
-#: smdataapp/templates/index.html:217
+#: smdataapp/templates/index.html:214
 msgid "About smdata.dev"
 msgstr "A smdata.dev-ról"
 
-#: smdataapp/templates/index.html:218
+#: smdataapp/templates/index.html:215
 msgid "Building digital systems that work for you"
 msgstr "Digitális rendszereket építünk, amelyek neked dolgoznak"
 
-#: smdataapp/templates/index.html:221
+#: smdataapp/templates/index.html:218
 msgid ""
 "We combine web development, database expertise, and automation to create "
 "tools that simplify your operations and grow your business. Each solution is "
 "fully customized — designed around your goals, not templates."
-msgstr "Webfejlesztést, adatbázis szakértelem és automatizálást kombinálunk, hogy olyan eszközöket hozzunk létre, amelyek egyszerűsítik műveleteidet és növelik vállalkozásod. Minden megoldás teljesen személyre szabott — a céljaid köré tervezve, nem sablonok alapján."
+msgstr ""
+"Webfejlesztést, adatbázis szakértelem és automatizálást kombinálunk, hogy "
+"olyan eszközöket hozzunk létre, amelyek egyszerűsítik műveleteidet és "
+"növelik vállalkozásod. Minden megoldás teljesen személyre szabott — a "
+"céljaid köré tervezve, nem sablonok alapján."
 
-#: smdataapp/templates/index.html:234
+#: smdataapp/templates/index.html:231
 msgid "Work Process"
 msgstr "Munkafolyamat"
 
-#: smdataapp/templates/index.html:235
+#: smdataapp/templates/index.html:232
 msgid "How We Work Together"
 msgstr "Hogyan dolgozunk együtt?"
 
-#: smdataapp/templates/index.html:238
+#: smdataapp/templates/index.html:235
 msgid ""
 "Every collaboration starts with your idea and ends with a custom, ready-to-"
 "use system. Simple process, powerful results."
-msgstr "Minden együttműködés az ötleteddel kezdődik és egy egyedi, használatra kész rendszerrel végződik. Egyszerű folyamat, erőteljes eredmények."
+msgstr ""
+"Minden együttműködés az ötleteddel kezdődik és egy egyedi, használatra kész "
+"rendszerrel végződik. Egyszerű folyamat, erőteljes eredmények."
 
-#: smdataapp/templates/index.html:247
+#: smdataapp/templates/index.html:244
 msgid "Discovery & Planning"
 msgstr "Felfedezés és tervezés"
 
-#: smdataapp/templates/index.html:248
+#: smdataapp/templates/index.html:245
 msgid ""
 "We analyze your goals, map your data, and design the perfect structure for "
 "your system."
-msgstr "Elemezzük a céljaidat, feltérképezzük az adataidat, és megtervezzük a tökéletes struktúrát a rendszeredhez."
+msgstr ""
+"Elemezzük a céljaidat, feltérképezzük az adataidat, és megtervezzük a "
+"tökéletes struktúrát a rendszeredhez."
 
-#: smdataapp/templates/index.html:254
+#: smdataapp/templates/index.html:251
 msgid "Development & Integration"
 msgstr "Fejlesztés és integráció"
 
-#: smdataapp/templates/index.html:255
+#: smdataapp/templates/index.html:252
 msgid ""
 "Using Django, Python, and automation tools, we build, connect, and test your "
 "platform."
-msgstr "Django, Python és automatizálási eszközök használatával építjük, kapcsoljuk és teszteljük a platformodat."
+msgstr ""
+"Django, Python és automatizálási eszközök használatával építjük, kapcsoljuk "
+"és teszteljük a platformodat."
 
-#: smdataapp/templates/index.html:261
+#: smdataapp/templates/index.html:258
 msgid "Launch & Support"
 msgstr "Indítás és támogatás"
 
-#: smdataapp/templates/index.html:262
+#: smdataapp/templates/index.html:259
 msgid ""
 "We deploy your system with full documentation, training, and optional "
 "ongoing maintenance."
-msgstr "Teljes dokumentációval, képzéssel és opcionális folyamatos karbantartással telepítjük a rendszeredet."
+msgstr ""
+"Teljes dokumentációval, képzéssel és opcionális folyamatos karbantartással "
+"telepítjük a rendszeredet."
 
-#: smdataapp/templates/index.html:275
-msgid "Let's Build Something Smart"
+#: smdataapp/templates/index.html:272
+msgid "Let’s Build Something Smart"
 msgstr "Építsünk valami okosat"
 
-#: smdataapp/templates/index.html:276
+#: smdataapp/templates/index.html:273
 msgid ""
-"Tell us about your project, challenge, or idea — and we'll show you how "
+"Tell us about your project, challenge, or idea — and we’ll show you how "
 "technology can make it faster, simpler, and more efficient."
-msgstr "Mesélj a projektedről, kihívásról vagy ötletről — és megmutatjuk, hogyan teheti a technológia gyorsabbá, egyszerűbbé és hatékonyabbá."
+msgstr ""
+"Mesélj a projektedről, kihívásról vagy ötletről — és megmutatjuk, hogyan "
+"teheti a technológia gyorsabbá, egyszerűbbé és hatékonyabbá."
 
-#: smdataapp/templates/index.html:279
+#: smdataapp/templates/index.html:276
 msgid "Email"
 msgstr "Email"
 
-#: smdataapp/templates/index.html:281
+#: smdataapp/templates/index.html:278
 msgid "Location"
 msgstr "Helyszín"
 
-#: smdataapp/templates/index.html:288
+#: smdataapp/templates/index.html:285
 msgid "Get in Touch"
 msgstr "Lépj kapcsolatba velünk"
 
-#: smdataapp/templates/index.html:295
+#: smdataapp/templates/index.html:286
+msgid "Send Us a Message"
+msgstr "Írjon nekünk üzenetet"
+
+#: smdataapp/templates/index.html:292
 msgid "Name"
 msgstr "Név"
 
-#: smdataapp/templates/index.html:301
+#: smdataapp/templates/index.html:298
 msgid "Phone"
 msgstr "Telefonszám"
 
-#: smdataapp/templates/index.html:304
+#: smdataapp/templates/index.html:301
 msgid "Tell us about your project"
 msgstr "Mesélj a projektedről"
 
-#: smdataapp/templates/index.html:311
+#: smdataapp/templates/index.html:308
 msgid "I accept the"
 msgstr "Elfogadom a"
 
-#: smdataapp/templates/index.html:311 smdataapp/templates/terms.html:8
+#: smdataapp/templates/index.html:308 smdataapp/templates/terms.html:8
 #: smdataapp/templates/terms.html:18
 msgid "Terms and Conditions"
-msgstr "Felhasználási feltételeket"
+msgstr "Felhasználási feltételek"
 
-#: smdataapp/templates/index.html:318
+#: smdataapp/templates/index.html:315
 msgid "Send Message"
 msgstr "Üzenet küldése"
 
-#: smdataapp/templates/index.html:338
+#: smdataapp/templates/index.html:505
+msgid "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking 'Accept', you consent to our use of cookies."
+msgstr "Cookie-kat használunk a böngészési élmény javításához, a webhely forgalmának elemzéséhez és a tartalom személyre szabásához. Az 'Elfogadás' gombra kattintva hozzájárul a cookie-k használatához."
+
+#: smdataapp/templates/index.html:507
+msgid "Learn more"
+msgstr "További információ"
+
+#: smdataapp/templates/index.html:511
+msgid "Decline"
+msgstr "Elutasítás"
+
+#: smdataapp/templates/index.html:512
+msgid "Accept"
+msgstr "Elfogadás"
+
+#: smdataapp/templates/index.html:335
 msgid ""
 "smdata.dev helps businesses automate workflows and make data-driven "
 "decisions through Django web development, integrations, and smart analytics."
@@ -214,18 +259,18 @@ msgstr ""
 "adatvezérelt döntéseket hozni Django webfejlesztéssel, integrációkkal és "
 "okos elemzéssel."
 
-#: smdataapp/templates/index.html:349
+#: smdataapp/templates/index.html:346
 msgid "Quick Links"
 msgstr "Gyors linkek"
 
-#: smdataapp/templates/index.html:381 smdataapp/templates/privacy.html:8
+#: smdataapp/templates/index.html:378 smdataapp/templates/privacy.html:8
 #: smdataapp/templates/privacy.html:18
 msgid "Privacy Policy"
 msgstr "Adatvédelmi szabályzat"
 
-#: smdataapp/templates/index.html:382
+#: smdataapp/templates/index.html:379
 msgid "Terms of Service"
-msgstr "Szolgáltatási feltételek"
+msgstr "Felhasználási feltételek"
 
 #: smdataapp/templates/privacy.html:19 smdataapp/templates/terms.html:19
 msgid "Last updated: "
@@ -253,23 +298,23 @@ msgstr "Használja weboldalunk szolgáltatásait"
 
 #: smdataapp/templates/privacy.html:31
 msgid "2. How We Use Your Information"
-msgstr ""
+msgstr "2. Hogyan használjuk fel az információit"
 
 #: smdataapp/templates/privacy.html:32
 msgid "We use the information we collect to:"
-msgstr ""
+msgstr "Az összegyűjtött információkat arra használjuk, hogy:"
 
 #: smdataapp/templates/privacy.html:34
 msgid "Respond to your inquiries and provide customer support"
-msgstr ""
+msgstr "Válaszoljunk az észrevételeire és ügyfélszolgálatot nyújtsunk"
 
 #: smdataapp/templates/privacy.html:35
 msgid "Communicate with you about our services"
-msgstr ""
+msgstr "Kapcsolatba lépjünk Önnel szolgáltatásainkról"
 
 #: smdataapp/templates/privacy.html:36
 msgid "Improve our website and services"
-msgstr ""
+msgstr "Tökéletesítsük weboldalunkat és szolgáltatásainkat"
 
 #: smdataapp/templates/privacy.html:37
 msgid "Comply with legal obligations"
@@ -283,7 +328,9 @@ msgstr "3. Információmegosztás"
 msgid ""
 "We do not sell, trade, or otherwise transfer your personal information to "
 "third parties without your consent, except:"
-msgstr "Nem adjuk el, nem cseréljük és nem továbbítjuk személyes adatait harmadik feleknek a hozzájárulása nélkül, kivéve:"
+msgstr ""
+"Nem adjuk el, nem cseréljük és nem továbbítjuk személyes adatait harmadik "
+"feleknek a hozzájárulása nélkül, kivéve:"
 
 #: smdataapp/templates/privacy.html:43
 msgid "When required by law"
@@ -308,7 +355,11 @@ msgid ""
 "information against unauthorized access, alteration, disclosure, or "
 "destruction. However, no method of transmission over the internet is 100%% "
 "secure."
-msgstr "Megfelelő biztonsági intézkedéseket alkalmazunk személyes adatainak jogosulatlan hozzáférés, módosítás, nyilvánosságra hozatal vagy megsemmisítés elleni védelmére. Azonban az interneten keresztüli átvitel egyik módja sem 100%%-ban biztonságos."
+msgstr ""
+"Megfelelő biztonsági intézkedéseket alkalmazunk személyes adatainak "
+"jogosulatlan hozzáférés, módosítás, nyilvánosságra hozatal vagy "
+"megsemmisítés elleni védelmére. Azonban az interneten keresztüli átvitel "
+"egyik módja sem 100%%-ban biztonságos."
 
 #: smdataapp/templates/privacy.html:51
 msgid "5. Cookies and Tracking"
@@ -319,7 +370,10 @@ msgid ""
 "Our website may use cookies to enhance your browsing experience. You can "
 "choose to disable cookies through your browser settings, though this may "
 "affect website functionality."
-msgstr "Weboldalunk sütiket használhat a böngészési élmény javítására. A böngésző beállításaiban letilthatja a sütiket, bár ez befolyásolhatja a weboldal funkcionalitását."
+msgstr ""
+"Weboldalunk sütiket használhat a böngészési élmény javítására. A böngésző "
+"beállításaiban letilthatja a sütiket, bár ez befolyásolhatja a weboldal "
+"funkcionalitását."
 
 #: smdataapp/templates/privacy.html:54
 msgid "6. Data Retention"
@@ -330,7 +384,10 @@ msgid ""
 "We retain your personal information only as long as necessary to fulfill the "
 "purposes outlined in this privacy policy, unless a longer retention period "
 "is required by law."
-msgstr "Személyes adatait csak addig őrizzük meg, ameddig szükséges az ezen adatvédelmi szabályzatban meghatározott célok teljesítéséhez, kivéve, ha a törvény hosszabb megőrzési időszakot ír elő."
+msgstr ""
+"Személyes adatait csak addig őrizzük meg, ameddig szükséges az ezen "
+"adatvédelmi szabályzatban meghatározott célok teljesítéséhez, kivéve, ha a "
+"törvény hosszabb megőrzési időszakot ír elő."
 
 #: smdataapp/templates/privacy.html:57
 msgid "7. Your Rights"
@@ -364,7 +421,9 @@ msgstr "8. Harmadik felek linkjei"
 msgid ""
 "Our website may contain links to third-party websites. We are not "
 "responsible for the privacy practices of these external sites."
-msgstr "Weboldalunk harmadik felek weboldalaira mutató linkeket tartalmazhat. Nem vagyunk felelősek ezen külső oldalak adatvédelmi gyakorlataiért."
+msgstr ""
+"Weboldalunk harmadik felek weboldalaira mutató linkeket tartalmazhat. Nem "
+"vagyunk felelősek ezen külső oldalak adatvédelmi gyakorlataiért."
 
 #: smdataapp/templates/privacy.html:69
 msgid "9. Children's Privacy"
@@ -374,7 +433,9 @@ msgstr "9. Gyerekek adatvédelme"
 msgid ""
 "Our services are not directed to children under 14. We do not knowingly "
 "collect personal information from children under 14."
-msgstr "Szolgáltatásaink nem 14 év alatti gyerekeknek szólnak. Tudatosan nem gyűjtünk személyes információkat 14 év alatti gyerekektől."
+msgstr ""
+"Szolgáltatásaink nem 14 év alatti gyerekeknek szólnak. Tudatosan nem "
+"gyűjtünk személyes információkat 14 év alatti gyerekektől."
 
 #: smdataapp/templates/privacy.html:72
 msgid "10. Changes to This Policy"
@@ -384,7 +445,9 @@ msgstr "10. A szabályzat módosításai"
 msgid ""
 "We may update this privacy policy from time to time. We will notify you of "
 "any changes by posting the new policy on this page."
-msgstr "Időről időre frissíthetjük ezt az adatvédelmi szabályzatot. Értesítünk minden változásról az új szabályzat ezen az oldalon való közzétételével."
+msgstr ""
+"Időről időre frissíthetjük ezt az adatvédelmi szabályzatot. Értesítünk "
+"minden változásról az új szabályzat ezen az oldalon való közzétételével."
 
 #: smdataapp/templates/privacy.html:75
 msgid "11. Contact Us"
@@ -393,7 +456,9 @@ msgstr "11. Kapcsolat"
 #: smdataapp/templates/privacy.html:76
 msgid ""
 "If you have any questions about this Privacy Policy, please contact us at:"
-msgstr "Ha bármilyen kérdése van ezzel az Adatvédelmi Szabályzattal kapcsolatban, kérjük, lépjen velünk kapcsolatba:"
+msgstr ""
+"Ha bármilyen kérdése van ezzel az Adatvédelmi Szabályzattal kapcsolatban, "
+"kérjük, lépjen velünk kapcsolatba:"
 
 #: smdataapp/templates/privacy.html:78 smdataapp/templates/terms.html:67
 msgid "Email: "
@@ -416,7 +481,11 @@ msgid ""
 "By accessing and using smdata.dev services, you accept and agree to be bound "
 "by the terms and provision of this agreement. If you do not agree to abide "
 "by the above, please do not use this service."
-msgstr "A smdata.dev szolgáltatások elérésével és használatával elfogadja és beleegyezik, hogy kötelezettséget vállal ezen megállapodás feltételei és rendelkezései szerint. Ha nem ért egyet a fentiek betartásával, kérjük, ne használja ezt a szolgáltatást."
+msgstr ""
+"A smdata.dev szolgáltatások elérésével és használatával elfogadja és "
+"beleegyezik, hogy kötelezettséget vállal ezen megállapodás feltételei és "
+"rendelkezései szerint. Ha nem ért egyet a fentiek betartásával, kérjük, ne "
+"használja ezt a szolgáltatást."
 
 #: smdataapp/templates/terms.html:26
 msgid "2. Services Description"
@@ -427,7 +496,11 @@ msgid ""
 "smdata.dev provides web development, data processing, reporting, automation, "
 "and integration services. We specialize in Django web applications, data "
 "dashboards, and business process automation."
-msgstr "Az smdata.dev webfejlesztést, adatfeldolgozást, jelentéskészítést, automatizálást és integrációs szolgáltatásokat nyújt. Django webalkalmazásokban, adatirányítópultokban és üzleti folyamatok automatizálásában specializálódunk."
+msgstr ""
+"Az smdata.dev webfejlesztést, adatfeldolgozást, jelentéskészítést, "
+"automatizálást és integrációs szolgáltatásokat nyújt. Django "
+"webalkalmazásokban, adatirányítópultokban és üzleti folyamatok "
+"automatizálásában specializálódunk."
 
 #: smdataapp/templates/terms.html:29
 msgid "3. User Responsibilities"
@@ -435,11 +508,14 @@ msgstr "3. Felhasználói felelősségek"
 
 #: smdataapp/templates/terms.html:31
 msgid "Provide accurate and complete information when contacting us"
-msgstr "Pontos és teljes információkat szolgáltasson, amikor kapcsolatba lép velünk"
+msgstr ""
+"Pontos és teljes információkat szolgáltasson, amikor kapcsolatba lép velünk"
 
 #: smdataapp/templates/terms.html:32
 msgid "Use our services in compliance with applicable laws and regulations"
-msgstr "Szolgáltatásainkat a vonatkozó törvényeknek és rendeleteknek megfelelően használja"
+msgstr ""
+"Szolgáltatásainkat a vonatkozó törvényeknek és rendeleteknek megfelelően "
+"használja"
 
 #: smdataapp/templates/terms.html:33
 msgid "Respect intellectual property rights"
@@ -458,11 +534,14 @@ msgid ""
 "We strive to maintain high service availability but cannot guarantee "
 "uninterrupted access. We reserve the right to modify or discontinue services "
 "with reasonable notice."
-msgstr "Törekszünk a magas szolgáltatás elérhetőség fenntartására, de nem tudjuk garantálni a megszakítás nélküli hozzáférést. Fenntartjuk a jogot a szolgáltatások módosítására vagy megszüntetésére ésszerű értesítéssel."
+msgstr ""
+"Törekszünk a magas szolgáltatás elérhetőség fenntartására, de nem tudjuk "
+"garantálni a megszakítás nélküli hozzáférést. Fenntartjuk a jogot a "
+"szolgáltatások módosítására vagy megszüntetésére ésszerű értesítéssel."
 
 #: smdataapp/templates/terms.html:40
 msgid "5. Intellectual Property"
-msgstr ""
+msgstr "5. Szellemi tulajdon"
 
 #: smdataapp/templates/terms.html:41
 msgid ""
@@ -470,40 +549,50 @@ msgid ""
 "intellectual property unless otherwise agreed in writing. Clients retain "
 "rights to their own data and requirements."
 msgstr ""
+"Az smdata.dev által létrehozott minden tartalom, design, kód és anyag "
+"szellemi tulajdonunk marad, hacsak nem egyeztetünk írásban másképp. Az "
+"ügyfelek megőrzik saját adataikra és követelményeikre vonatkozó jogokat."
 
 #: smdataapp/templates/terms.html:43
 msgid "6. Limitation of Liability"
-msgstr ""
+msgstr "6. Felelősség korlátozása"
 
 #: smdataapp/templates/terms.html:44
 msgid ""
 "smdata.dev shall not be liable for any indirect, incidental, special, or "
 "consequential damages arising from the use of our services."
 msgstr ""
+"Az smdata.dev nem vállal felelősséget a szolgáltatásaink használatából "
+"eredő közvetett, véletlen, speciális vagy következményes károkért."
 
 #: smdataapp/templates/terms.html:46
 msgid "7. Payment Terms"
-msgstr ""
+msgstr "7. Fizetési feltételek"
 
 #: smdataapp/templates/terms.html:47
 msgid ""
 "Payment terms will be specified in individual project agreements. All prices "
 "are subject to change with prior notice."
 msgstr ""
+"A fizetési feltételeket az egyedi projekt megállapodásokban adjuk meg. "
+"Minden ár előzetes értesítéssel változhat."
 
 #: smdataapp/templates/terms.html:49
 msgid "8. Project Scope and Changes"
-msgstr ""
+msgstr "8. Projekt hatókör és változtatások"
 
 #: smdataapp/templates/terms.html:50
 msgid ""
 "Project scope will be clearly defined in written agreements. Any changes to "
 "scope may result in additional charges and timeline adjustments."
 msgstr ""
+"A projekt hatóköre írásos megállapodásokban egyértelműen definiálva lesz. A "
+"hatókör bármilyen módosítása további költségeket és időzítési "
+"módosításokat eredményezhet."
 
 #: smdataapp/templates/terms.html:52
 msgid "9. Confidentiality"
-msgstr ""
+msgstr "9. Titoktartás"
 
 #: smdataapp/templates/terms.html:53
 msgid ""
@@ -511,10 +600,12 @@ msgid ""
 "details. We will not disclose sensitive information to third parties without "
 "written consent."
 msgstr ""
+"Szigorúan titkosítjuk az ügyfél-információkat és projekt részleteket. Nem "
+"osztjuk meg érzékeny információkat harmadik felekkel írásos beleegyezés nélkül."
 
 #: smdataapp/templates/terms.html:55
 msgid "10. Termination"
-msgstr ""
+msgstr "10. Megszüntetés"
 
 #: smdataapp/templates/terms.html:56
 msgid ""
@@ -522,26 +613,33 @@ msgid ""
 "all outstanding obligations must be fulfilled and project materials will be "
 "delivered as agreed."
 msgstr ""
+"Mindkét fél írásos értesítéssel megszüntetheti a szolgáltatásokat. A "
+"megszüntetéskor minden kifolyó kötelezettség teljesítésre kerül, és a "
+"projektanyagok egyeztetés szerint átadásra kerülnek."
 
 #: smdataapp/templates/terms.html:58
 msgid "11. Governing Law"
-msgstr ""
+msgstr "11. Alkalmazandó jog"
 
 #: smdataapp/templates/terms.html:59
 msgid ""
 "These terms are governed by the laws of Romania. Any disputes will be "
 "resolved through Romanian courts."
 msgstr ""
+"Ezek a feltételek Romániának a törvényei szerint érvényesülnek. Minden vitát "
+"román bíróságok eloldanak."
 
 #: smdataapp/templates/terms.html:61
 msgid "12. Changes to Terms"
-msgstr ""
+msgstr "12. Feltételek módosítása"
 
 #: smdataapp/templates/terms.html:62
 msgid ""
 "We reserve the right to modify these terms at any time. Changes will be "
 "effective immediately upon posting on our website."
 msgstr ""
+"Fenntartjuk a jogot a feltételek bármikori módosítására. A változások "
+"weboldalunkon való közzététel pillanatától érkeznek életbe."
 
 #: smdataapp/templates/terms.html:64
 msgid "13. Contact Information"
@@ -549,7 +647,7 @@ msgstr "13. Kapcsolati információk"
 
 #: smdataapp/templates/terms.html:65
 msgid "For questions about these Terms and Conditions, please contact us at:"
-msgstr ""
+msgstr "Ezekről a Felhasználási feltételekről kérdezni lépjen velünk kapcsolatba:"
 
 #: venv/lib/python3.13/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"
@@ -1775,213 +1873,8 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#~ msgid "Blog"
-#~ msgstr "Blog"
-
-#~ msgid "Welcome to my site!"
-#~ msgstr "Üdvözöllek az oldalon!"
-
-#~ msgid ""
-#~ "Personalized Django applications, smart chatbots, dashboards, booking "
-#~ "systems, and business automation."
-#~ msgstr ""
-#~ "Személyre szabott Django alkalmazások, intelligens chatbotok, "
-#~ "irányítópultok, foglalási rendszerek és üzleti automatizáció."
-
-#~ msgid "Get a Quote"
-#~ msgstr "Árajánlat kérése"
-
-#~ msgid ""
-#~ "Modern, scalable web platforms tailor-made for your business or service "
-#~ "model."
-#~ msgstr ""
-#~ "Modern, skálázható webes platformok az Ön vállalkozásához vagy "
-#~ "szolgáltatási modelljéhez igazítva."
-
-#~ msgid "AI Chatbots & Messaging"
-#~ msgstr "AI Chatbotok és üzenetküldés"
-
-#~ msgid ""
-#~ "Chatbots for Messenger, WhatsApp, Instagram, or your website – "
-#~ "multilingual and ready to automate support or sales."
-#~ msgstr ""
-#~ "Chatbotok Messengerre, WhatsAppra, Instagramra vagy weboldalra – "
-#~ "többnyelvűek, és készen állnak az ügyfélszolgálat vagy értékesítés "
-#~ "automatizálására."
-
-#~ msgid "Booking & Gift Card Modules"
-#~ msgstr "Foglalási és ajándékkártya modulok"
-
-#~ msgid ""
-#~ "Let customers schedule services or send branded gift cards, seamlessly "
-#~ "integrated into your site."
-#~ msgstr ""
-#~ "Engedje meg ügyfeleinek, hogy szolgáltatásokat foglaljanak vagy logózott "
-#~ "ajándékkártyákat küldjenek – mindez zökkenőmentesen integrálva "
-#~ "weboldalába."
-
-#~ msgid "Data Dashboards & Automations"
-#~ msgstr "Adatirányítópultok és automatizációk"
-
-#~ msgid ""
-#~ "Turn business data into insights using Google Drive projects, real-time "
-#~ "dashboards, and task automation agents."
-#~ msgstr ""
-#~ "Alakítsa át vállalati adatait hasznos betekintésekké Google Drive alapú "
-#~ "projektek, valós idejű irányítópultok és feladatautomatizáló megoldások "
-#~ "segítségével."
-
-#~ msgid "About Company"
-#~ msgstr "A vállalkozásról"
-
-#~ msgid "Digital tools to simplify and grow your business"
-#~ msgstr ""
-#~ "Digitális eszközök az Ön vállalkozásának egyszerűsítésére és fejlesztésére"
-
-#~ msgid ""
-#~ "I help businesses and professionals by building web solutions that "
-#~ "automate, simplify, and convert. Whether it’s a smart quote system, AI "
-#~ "chatbot, or real-time analytics dashboard, I turn your processes into "
-#~ "efficient, user-friendly digital tools."
-#~ msgstr ""
-#~ "Üzleteknek és szakembereknek segítek olyan webes megoldásokkal, amelyek "
-#~ "automatizálnak, egyszerűsítenek és hatékonyabbá tesznek. Legyen szó "
-#~ "intelligens árajánlat rendszerről, AI chatbotől vagy valós idejű "
-#~ "analitikai irányítópultról – átalakítom a folyamatait felhasználóbarát "
-#~ "digitális eszközökké."
-
-#~ msgid "High Quality Work"
-#~ msgstr "Magas színvonalú munka"
-
-#~ msgid "All Clients Satisfaction"
-#~ msgstr "Ügyfeleim elégedettsége a legfontosabb"
-
-#~ msgid "Money Back Guarantee"
-#~ msgstr "Pénzvisszafizetési garancia"
-
-#~ msgid ""
-#~ "I work with entrepreneurs and growing businesses to deliver smart digital "
-#~ "solutions — from AI-powered chatbots to personalized Django platforms and "
-#~ "business dashboards. Every project begins with your goals and ends with a "
-#~ "tailored system that works, automates, and scales."
-#~ msgstr ""
-#~ "Vállalkozókkal és növekvő cégekkel dolgozom együtt, hogy intelligens "
-#~ "digitális megoldásokat biztosítsak – az AI-alapú chatbotoktól a személyre "
-#~ "szabott Django platformokon át az üzleti irányítópultokig. Minden projekt "
-#~ "az Ön céljaival kezdődik, és egy működőképes, automatizált és skálázható "
-#~ "rendszerrel zárul."
-
-#~ msgid "Pick your service"
-#~ msgstr "Válassza ki a szolgáltatást"
-
-#~ msgid ""
-#~ "Choose from ready-made services or request a custom web/automation "
-#~ "solution."
-#~ msgstr ""
-#~ "Válassz kész szolgáltatások közül, vagy kérj egyedi webes/automatizálási "
-#~ "megoldást."
-
-#~ msgid ""
-#~ "I review your needs and design the best system using Django, AI, and "
-#~ "automation tools."
-#~ msgstr ""
-#~ "Áttekintem az igényeidet, és a legjobb rendszert tervezem meg Django, AI "
-#~ "és automatizálási eszközök segítségével."
-
-#~ msgid ""
-#~ "You get a professional, secure solution, with ongoing support and "
-#~ "subscription-based upgrades."
-#~ msgstr ""
-#~ "Professzionális, biztonságos megoldást kapsz, folyamatos támogatással és "
-#~ "előfizetéses frissítésekkel."
-
-#~ msgid "Latest Blog"
-#~ msgstr "Legfrissebb blog"
-
-#~ msgid "News & Update"
-#~ msgstr "Hírek és frissítések"
-
-#~ msgid "Finance"
-#~ msgstr "Pénzügy"
-
-#~ msgid "Md Sohag"
-#~ msgstr "Md Sohag"
-
-#~ msgid "Considered imprudence of he friendship many variations boisterous."
-#~ msgstr "A barátság meggondolatlanságát sokféleképpen zajosan élték meg."
-
-#~ msgid ""
-#~ "Easy mind life fact with see has bore ten. Parish any chatty can elinor "
-#~ "direct for former. Up as meant widow equal."
-#~ msgstr ""
-#~ "Könnyed elme, egyszerű élet – tízszer is átgondolva. Bármely társalgó "
-#~ "közösség Elinorral az élen. Egy özvegynek szánt egyenlőség – így "
-#~ "emelkedik ki."
-
-#~ msgid "Success"
-#~ msgstr "Siker"
-
-#~ msgid ""
-#~ "Perceived determine departure explained no forfeited he something an."
-#~ msgstr "Érzékelte a távozás szükségét, de nem vesztett el semmit ezzel."
-
-#~ msgid "Analysis"
-#~ msgstr "Elemzés"
-
-#~ msgid "Discovery incommode earnestly commanded if."
-#~ msgstr "A felfedezés zavarba ejtően, de határozottan következett be."
-
-#~ msgid ""
-#~ "Tell me about your business — and I’ll create something that saves you "
-#~ "time, boosts conversions, or both."
-#~ msgstr ""
-#~ "Mesélj a vállalkozásodról — és olyan megoldást készítek, ami időt takarít "
-#~ "meg, növeli az eredményességet, vagy mindkettőt."
-
-#~ msgid "Hotline"
-#~ msgstr "Telefonos elérhetőség"
-
-#~ msgid "55 Main Street, The Grand Avenue 2nd Block, <br> New York City"
-#~ msgstr "55 Main Street, The Grand Avenue 2. blokk, <br> New York City"
-
-#~ msgid "Official Email"
-#~ msgstr "Hivatalos e-mail"
-
-#~ msgid "Have Questions?"
-#~ msgstr "Kérdésed van?"
-
-#~ msgid "Our Company"
-#~ msgstr "Cégünkről"
-
-#~ msgid "Compnay Profile"
-#~ msgstr "Cégprofil"
-
-#~ msgid "Help Center"
-#~ msgstr "Súgóközpont"
-
-#~ msgid "Career"
-#~ msgstr "Karrier"
-
-#~ msgid "Plans & Pricing"
-#~ msgstr "Csomagok és árak"
-
-#~ msgid "AI Chatbots"
-#~ msgstr "AI Chatbotok"
-
-#~ msgid "AI Automations"
-#~ msgstr "AI Automatizációk"
-
-#~ msgid "IT Consulting"
-#~ msgstr "IT Tanácsadás"
-
-#~ msgid "Get in touch"
-#~ msgstr "Vedd fel velünk a kapcsolatot"
-
-#~ msgid "&copy; Copyright 2025. All Rights Reserved by"
-#~ msgstr "© 2025. Minden jog fenntartva:"
-
-#~ msgid "Terms"
-#~ msgstr "Felhasználási feltételek"
-
-#~ msgid "Support"
-#~ msgstr "Támogatás"
+#: venv/lib/python3.13/site-packages/test/integ/test_sendgrid.py:333
+#: venv/lib/python3.13/site-packages/test/integ/test_sendgrid.py:340
+#: venv/lib/python3.13/site-packages/test/integ/test_sendgrid.py:347
+msgid "global"
+msgstr ""
